@@ -48,7 +48,7 @@
   text-align: center;
   text-shadow: 0 2px 4px #000;
   font-family: "Poppins";
-  font-size: 16px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
@@ -66,9 +66,16 @@
   text-transform: capitalize;
   z-index: 40;
 
-  text-shadow: 6px 6px 0 #212529, -3px -3px 0 #333128, 3px -3px 0 #333128,
-    -3px 3px 0 #333128, 3px 3px 0 #333128, -4px 0 0 #333128, 4px 0 0 #333128,
-    0 -4px 0 #333128, 0 4px 0 #333128;
+  text-shadow: 
+    /* 1. Bóng đổ sâu nhất: Tăng từ 6px lên 7px */ 7px 7px 0
+      #212529,
+    /* 2. Các hướng giữ nguyên (Trên và Trái) */ -3px -3px 0 #333128,
+    -4px 0 0 #333128, 0 -4px 0 #333128,
+    /* 3. Các hướng cần làm dày (Dưới và Phải): Tăng thêm 1px */ 4px -3px 0 #333128,
+    /* Góc Phải-Trên: tăng x lên 4 */ -3px 4px 0 #333128,
+    /* Góc Trái-Dưới: tăng y lên 4 */ 4px 4px 0 #333128,
+    /* Góc Phải-Dưới: tăng cả 2 lên 4 */ 5px 0 0 #333128,
+    /* Cạnh Phải: tăng từ 4 lên 5 */ 0 5px 0 #333128; /* Cạnh Dưới: tăng từ 4 lên 5 */
 }
 
 .title-banner h4 {
@@ -809,7 +816,7 @@ h4 {
 .col-lg-12.list-meme .col-lg-6,
 .col-lg-12.list-meme .col-lg-4 {
   position: relative;
-  padding: 25px 55px;
+  padding: 10px 30px;
 }
 
 .col-lg-12.list-meme img {
@@ -1433,7 +1440,7 @@ section,
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 3rem;
+  /* padding-right: 3rem; */
 }
 
 .hero-bg {
