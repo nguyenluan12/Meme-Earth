@@ -30,6 +30,7 @@
   /* 113.333% */
   text-transform: capitalize;
   text-align: center;
+  
 }
 
 #discovery p {
@@ -94,8 +95,21 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-}
 
+}
+@media (min-width: 1220px) {
+  #vitural-real {
+    background-image: url("../img/p4/background.png");
+    background-repeat: no-repeat;
+    
+    background-position: top center; 
+    background-size: 1440px 100%; 
+
+    background-color: #243801; 
+    width: 100%; 
+    height: 810px;
+  }
+}
 .discovery.section {
   background-image: url("../img/bg-section-2.jpg");
   background-repeat: no-repeat;
@@ -148,12 +162,16 @@
   /* 150% */
 }
 #vitural-real .container {
+  position: relative;
   margin-top: -100px;
 }
 .viewer-path {
-  margin-top: 380px;
-  margin-left: 230px;
+  position: absolute !important; 
+  margin: 0 !important; 
+  width: auto;
+  transform: translate(15%, 95%);
 }
+
 #vitural-real-svg2 {
   display: none;
 }
@@ -170,31 +188,31 @@
 }
 
 .land1 {
-  top: 13%;
-  left: 7%;
+  transform: translate(0, -10%);
 }
 
 .land2 {
-  top: 54%;
-  left: 18%;
+  transform: translate(45%, 70%);
 }
 
 .land3 {
-  top: 15%;
-  left: 34%;
+  transform: translate(105%, -2%);
 }
 
 .land4 {
-  top: 50%;
-  left: 48%;
+  top: 40%;
+  left: 43%;
+  transform: translate(0, 70%);
 }
 .land5 {
-  top: 62%;
-  left: 72%;
+  top: 50%;
+  left: 64.5%;
+  transform: translate(0, 90%);
 }
 .land6 {
-  top: 20%;
-  left: 85%;
+  top: 18%;
+  left: 76%;
+  transform: translate(0, 30%);
 }
 #viewer,
 #viewer2,
@@ -208,7 +226,7 @@
   /* margin-top: -60px; */
 }
 #viewer-gate {
-  width: 170px;
+  width: 165px;
 }
 #viewer-memaland {
   width: 339px;
@@ -798,7 +816,9 @@ p {
 .hero .title-group {
   text-align: center;
 }
-
+.title-banner h2 {
+  white-space: nowrap;
+}
 h2 {
   font-size: 4rem;
   margin-bottom: 20px;
@@ -3135,7 +3155,7 @@ section.partner {
   }
 
   #discovery h4 {
-    font-size: 2rem !important;
+    font-size: 1.7rem !important;
     margin-bottom: 5px !important;
   }
 
@@ -3591,8 +3611,7 @@ section.partner {
 /* =========================================
    TABLET / IPAD RESPONSIVE (768px - 1199px)
    ========================================= */
-@media (min-width: 768px) and (max-width: 1023px) {
-  /* 1. CẤU HÌNH CHUNG (Font chữ to hơn Mobile) */
+@media (min-width: 767px) and (max-width: 1023px) {
   html,
   body {
     overflow-x: hidden;
@@ -3620,17 +3639,14 @@ section.partner {
     padding-right: 30px !important;
   }
 
-  /* 2. HEADER CONTAINER: Cao hơn và thoáng hơn */
   .header .header-container {
     position: relative;
     justify-content: space-between !important;
-    padding: 10px 30px !important; /* Tăng padding */
+    padding: 10px 30px !important; 
     margin: 0 !important;
     align-items: center;
-    height: 90px !important; /* Tăng chiều cao từ 60px lên 90px */
+    height: 90px !important; 
   }
-
-  /* 3. LOGO: Căn giữa và to hơn */
   .header .logo {
     position: absolute;
     left: 50%;
@@ -3641,17 +3657,16 @@ section.partner {
   }
 
   .header .logo img {
-    width: 90px !important; /* Tăng từ 55px lên 90px cho rõ nét trên iPad */
+    width: 90px !important; 
     padding: 0 !important;
     padding-right: 0px !important;
     margin-left: 100px;
   }
 
-  /* 4. MENU ICON (Hamburger): To hơn */
   .mobile-nav-toggle {
-    display: block !important; /* Hiện icon menu trên iPad */
+    display: block !important; 
     color: #000000 !important;
-    font-size: 42px !important; /* Tăng từ 32px lên 42px */
+    font-size: 42px !important; 
     margin-right: 0 !important;
     cursor: pointer;
     z-index: 10001;
@@ -3661,13 +3676,11 @@ section.partner {
     margin-top: 8px !important;
   }
 
-  /* 5. NÚT BUY LAND: To hơn */
   .header a > img[src*="buyland.png"] {
-    width: 150px !important; /* Tăng từ 120px lên 150px */
+    width: 150px !important; 
     height: auto !important;
   }
 
-  /* 6. MENU POPUP (Dạng thẻ bài lớn) */
   .navmenu ul {
     display: none !important;
   }
@@ -3676,28 +3689,26 @@ section.partner {
     display: block !important;
     position: fixed !important;
 
-    /* Căn chỉnh vị trí popup */
-    top: 105px !important; /* Cách header một khoảng (90px header + 10px) */
-    left: 120px !important; /* Cách lề nhiều hơn để tạo dáng thẻ bài ở giữa */
+    top: 105px !important; 
+    left: 120px !important; 
     right: 120px !important;
 
     background: #f8f9fa !important;
     border-radius: 20px;
-    padding: 30px 0 !important; /* Padding dày hơn */
+    padding: 30px 0 !important; 
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
     z-index: 9999;
     overflow-y: auto;
     height: 40vh;
   }
 
-  /* Link trong menu: Chữ to, dễ bấm */
   .navmenu .nav-link {
     color: #333333 !important;
     font-family: "Lilita One", sans-serif;
-    font-size: 1.8rem !important; /* Tăng font size menu */
+    font-size: 1.8rem !important; 
     text-align: center;
     justify-content: center !important;
-    padding: 15px 0 !important; /* Khoảng cách giữa các dòng thoáng hơn */
+    padding: 15px 0 !important; 
   }
 
   .navmenu .nav-link:hover {
@@ -3708,49 +3719,45 @@ section.partner {
     background: transparent !important;
   }
 
-  /* --- 2. HERO SECTION (TABLET - Styled like Mobile) --- */
 
   .hero {
-    padding-top: 100px !important; /* Tạo khoảng trống phía trên cho nhân vật */
+    padding-top: 100px !important; 
     padding-bottom: 40px !important;
-    margin-top: -90px !important; /* Margin âm để kéo section đè lên phần đen của header */
+    margin-top: -90px !important; 
     height: auto !important;
-    min-height: 700px !important; /* Đảm bảo độ cao tối thiểu để background phủ hết */
-    position: relative !important; /* Quan trọng: Để làm mốc cho background */
+    min-height: 700px !important; 
+    position: relative !important;
     overflow: hidden !important;
   }
 
   .hero .container {
     margin-top: 0 !important;
     position: relative;
-    z-index: 2; /* Đưa nội dung nổi lên trên hình nền */
+    z-index: 2;
   }
   .hero-elipse {
     position: absolute !important;
-    top: 0 !important; /* Kéo lên tận đỉnh section */
+    top: 0 !important; 
     left: 0 !important;
     width: 100% !important;
-    height: 100% !important; /* Phủ kín chiều cao */
-    transform: none !important; /* Reset các lệnh dịch chuyển cũ */
-    z-index: 0 !important; /* Nằm dưới cùng */
+    height: 100% !important; 
+    transform: none !important; 
+    z-index: 0 !important; 
   }
 
-  /* Cấu hình ảnh bên trong div nền */
   .hero-elipse img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important; /* Co giãn ảnh để lấp đầy không gian mà không bị méo */
-    object-position: center top !important; /* Ưu tiên hiển thị phần trên của ảnh */
+    object-fit: cover !important; 
+    object-position: center top !important; 
   }
 
-  /* 1. TRÁI ĐẤT (Thu nhỏ bớt so với hiện tại, nhưng to hơn mobile) */
   .hero .content-col:first-child {
     height: 300px !important;
     margin-top: 0 !important;
     margin-bottom: 20px !important;
   }
 
-  /* Giảm size Trái đất chút xíu để vừa vặn hơn */
   .earth-bg-banner,
   .earth-banner,
   .over-earth-banner {
@@ -3763,25 +3770,23 @@ section.partner {
     width: 270px !important;
   }
 
-  /* 2. CÁC NHÂN VẬT (Sắp xếp giống hệt Mobile) */
   .list-meme {
     margin-top: -30px !important;
   }
 
-  /* Hàng trên cùng (Pepe & Doge) */
   .list-meme .row:first-child {
     display: flex !important;
-    flex-direction: row !important; /* Bắt buộc xếp ngang */
-    justify-content: space-between !important; /* Đẩy dạt sang 2 bên */
-    flex-wrap: nowrap !important; /* Không cho xuống dòng */
+    flex-direction: row !important;
+    justify-content: space-between !important; 
+    flex-wrap: nowrap !important;
 
     width: 100% !important;
-    margin: 0 0 !important; /* Căn giữa và tạo khoảng cách đáy */
+    margin: 0 0 !important; 
     padding: 0 100px !important;
   }
 
   .list-meme .row:first-child img {
-    width: 120px !important; /* To hơn mobile (70px) */
+    width: 120px !important; 
   }
   #doge-p1 {
     transform: translate(40px, -50px);
@@ -3789,12 +3794,11 @@ section.partner {
   #pepe-p1 {
     transform: translate(-190px, -40px);
   }
-  /* Hàng nhân vật chính (Penguin - Mema - Squirrel) */
   .hero-characters-row {
     display: flex !important;
     justify-content: space-between !important;
     align-items: flex-end !important;
-    width: 80% !important; /* Giới hạn chiều rộng để không bị xa quá */
+    width: 80% !important; 
     max-width: 600px !important;
     padding: 0 !important;
     margin: 0 auto !important;
@@ -3808,32 +3812,28 @@ section.partner {
     flex: 0 0 auto !important;
   }
 
-  /* Mema (Giữa) */
   img.hero-mema {
-    width: 140px !important; /* To hơn mobile (140px) */
-    transform: translate(25px, -120px) !important; /* Bay cao hơn */
+    width: 140px !important;
+    transform: translate(25px, -120px) !important; 
     z-index: 20;
     margin: 0 !important;
   }
 
-  /* Penguin (Trái) */
   img.hero-penguin {
-    width: 110px !important; /* To hơn mobile (75px) */
+    width: 110px !important; 
     margin-bottom: 10px !important;
     transform: translate(40px, -100px) !important;
   }
 
-  /* Squirrel (Phải) */
   img.hero-squirrel {
-    width: 110px !important; /* To hơn mobile (75px) */
+    width: 110px !important; 
     margin-bottom: 10px !important;
     transform: translate(-40px, -100px) !important;
   }
 
-  /* 3. TEXT & BUTTON (Kéo lên sát nhân vật) */
   .title-banner {
     transform: none !important;
-    margin-top: -50px !important; /* Margin âm lớn để kéo sát lên */
+    margin-top: -50px !important; 
     position: relative !important;
     display: flex;
     flex-direction: column;
@@ -3848,7 +3848,7 @@ section.partner {
   }
 
   .title-banner h2 {
-    font-size: 3rem !important; /* Font to cho iPad */
+    font-size: 3rem !important;
     line-height: 1.2;
     margin-bottom: 15px;
     padding: 0 20px;
@@ -4122,7 +4122,7 @@ section.partner {
   #hub .over-earth-banner {
     display: block !important;
     position: absolute !important;
-    top: 50% !important;
+    top: 80% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
     margin: 0 !important;
@@ -4136,29 +4136,44 @@ section.partner {
   .map-earth-meme-list {
     position: relative;
     margin-top: 100px !important;
+    /* transform: translateY(70%); */
   }
-
+  /* .icon-p3 {
+    position: absolute;
+    z-index: 5;
+  } */
+  /* .mema-p3{
+    top: 60% !important;
+    left: -30% !important;
+  } */
   #mema-p3 {
     width: 180px;
-    transform: translateX(-30px);
+    transform: translateX(-90%);
   }
 
   #doge-p3 {
     width: 200px;
-    transform: translate(320px, -160px);
+    transform: translate(80%, -90%);
   }
 
   #pepe-p3 {
     width: 150px;
-    transform: translate(-10px, -140px);
+    transform: translate(-110%, -50%);
   }
 
   #doge2-p3 {
     width: 140px;
-    transform: translate(300px, -390px);
+    transform: translate(100%, -150%);
   }
 
   /* Vitural Real  */
+  #vitural-real {
+    padding-top: 50px !important;
+    padding-bottom: 60px !important;
+    background-size: cover;
+    height: 810px !important;
+    overflow: hidden;
+  }
 
   #vitural-real > h4 {
     font-size: 3rem !important;
@@ -4187,8 +4202,10 @@ section.partner {
     margin: 15px auto !important;
   }
   #vitural-real-svg1 {
-    transform: scale(0.7) translate(-450px, 0px);
+    transform: scale(0.7) translate(-43%, 15%);
   }
+  
+
   .land1,
   .land2,
   .land3,
@@ -4202,27 +4219,26 @@ section.partner {
   }
 
   .land1 {
-    top: 30%;
-    left: 2%;
+    transform: translate(-35%, 40%);
   }
 
   .land2 {
-    top: 60%;
-    left: 17%;
+    transform: translate(20%, 115%);
   }
 
   .land3 {
-    top: 32%;
-    left: 34%;
+    transform: translate(103%, 50%);
   }
 
   .land4 {
-    top: 55%;
-    left: 53%;
+    top: 50%;
+    left: 45%;
+    transform: translate(0, 110%);
   }
   .land5 {
-    top: 50%;
-    left: 80%;
+    top: 0%;
+    left: 70%;
+    transform: translate(0, 130%) rotate(5deg);
   }
   .land6 {
     display: none !important;
@@ -4239,7 +4255,7 @@ section.partner {
     /* margin-top: -60px; */
   }
   #viewer-gate {
-    width: 170px;
+    width: 140px;
   }
   #viewer-memaland {
     width: 339px;
