@@ -4356,21 +4356,25 @@ section.partner {
   .map-p3 {
     transform: scale(0.9) translateX(50px);
   }
+  #vitural-real{
+    height: 810px !important;
+  }
+  
   #vitural-real-svg1 {
-    transform: translateX(-180px);
+    transform: translateX(-15%);
   }
   .land1 {
-    left: -3%;
+    left: -5%;
   }
   .land2 {
-    left: 12%;
+    left: -5%;
   }
   .land4 {
-    left: 50%;
+    left: 45%;
   }
   .land5 {
     top: 50%;
-    left: 79%;
+    left: 75%;
   }
   .land6 {
     display: none;
