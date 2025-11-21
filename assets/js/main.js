@@ -7,7 +7,7 @@
  */
 
 (function () {
-  "use strict";
+  ("use strict");
 
   /**
    * Apply .scrolled class to the body as the page is scrolled down
@@ -28,9 +28,9 @@
       !selectHeader.classList.contains("fixed-top")
     )
       return;
-    window.scrollY > 100 ?
-      selectBody.classList.add("scrolled") :
-      selectBody.classList.remove("scrolled");
+    window.scrollY > 100
+      ? selectBody.classList.add("scrolled")
+      : selectBody.classList.remove("scrolled");
   }
   document.addEventListener("scroll", toggleScrolled);
   window.addEventListener("load", toggleScrolled);
@@ -55,6 +55,27 @@
   if (mobileNavToggleBtn) {
     mobileNavToggleBtn.addEventListener("click", mobileNavToogle);
   }
+  /**
+   * Close mobile nav on click outside
+   * (Đóng menu khi click ra ngoài khoảng trắng)
+   */
+  document.addEventListener("click", function (e) {
+    // Kiểm tra xem menu có đang mở không
+    const body = document.querySelector("body");
+    if (body.classList.contains("mobile-nav-active")) {
+      // Kiểm tra xem cú click có nằm trong cái hộp menu trắng (.navmenu ul) hay không
+      const isClickInsideMenu = e.target.closest(".navmenu ul");
+
+      // Kiểm tra xem cú click có nằm trên nút icon X/3 gạch hay không
+      const isClickOnToggle = e.target.closest(".mobile-nav-toggle");
+
+      // Nếu KHÔNG phải click vào menu VÀ KHÔNG phải click vào nút toggle
+      // => Thì đóng menu lại
+      if (!isClickInsideMenu && !isClickOnToggle) {
+        mobileNavToogle(); // Gọi lại hàm toggle có sẵn để đóng
+      }
+    }
+  });
 
   /**
    * Hide mobile nav on same-page/hash links
@@ -96,9 +117,9 @@
 
   function toggleScrollTop() {
     if (scrollTop) {
-      window.scrollY > 100 ?
-        scrollTop.classList.add("active") :
-        scrollTop.classList.remove("active");
+      window.scrollY > 100
+        ? scrollTop.classList.add("active")
+        : scrollTop.classList.remove("active");
     }
   }
   scrollTop.addEventListener("click", (e) => {
@@ -257,7 +278,7 @@
     const FPS = 12;
     const IMAGE_PATH = `./assets/img/${type}_land/`;
     const IMAGE_PREFIX = `${type}_land_`;
-    const IMAGE_EXT = '.png';
+    const IMAGE_EXT = ".png";
     const PAD_ZERO = 2;
 
     // --- Biến ---
@@ -271,7 +292,12 @@
 
     // --- Tạo tên file ---
     function frameFileName(i) {
-      return IMAGE_PATH + IMAGE_PREFIX + i.toString().padStart(PAD_ZERO, '0') + IMAGE_EXT;
+      return (
+        IMAGE_PATH +
+        IMAGE_PREFIX +
+        i.toString().padStart(PAD_ZERO, "0") +
+        IMAGE_EXT
+      );
     }
 
     // --- Preload ảnh ---
@@ -316,13 +342,12 @@
 
   // --- Gọi nhiều animation ---
 
-
   //animation
   // (() => {
   //   // --- Cấu hình ---
   //   startAnimation('legend', 'viewer');
   //   startAnimation('epic', 'viewer2');
-  //   startAnimation('rare', 'viewer3'); 
+  //   startAnimation('rare', 'viewer3');
   //   startAnimation('common', 'viewer4');
   // })();
 
@@ -447,8 +472,9 @@
             obs.unobserve(entry.target);
           }
         });
-      }, {
-        threshold: 0.25
+      },
+      {
+        threshold: 0.25,
       }
     );
 

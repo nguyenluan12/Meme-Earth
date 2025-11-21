@@ -9,7 +9,7 @@
   transform: translate(-50%, -50%);
   padding: 10px 20px;
   border-radius: 8px;
-  width: 374px;
+  width: 410px;
   z-index: 1;
 }
 
@@ -17,18 +17,11 @@
   z-index: 20;
 }
 
-#viewer,
-#viewer2,
-#viewer3,
-#viewer4 {
-  width: 100%;
-}
-
 #discovery h4 {
   color: #fcfcfd;
-  text-shadow: 4px 4px 0 #212529;
-  -webkit-text-stroke-width: 4px;
-  -webkit-text-stroke-color: #333128;
+  text-shadow: 7px 7px 0 #212529, -3px -3px 0 #333128, -4px 0 0 #333128,
+    0 -4px 0 #333128, 4px -3px 0 #333128, -3px 4px 0 #333128, 4px 4px 0 #333128,
+    5px 0 0 #333128, 0 5px 0 #333128;
   font-family: "Lilita One";
   font-size: 60px;
   font-style: normal;
@@ -41,6 +34,14 @@
 
 #discovery p {
   text-align: center;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 2px 4px #000;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
 }
 
 .title-banner p {
@@ -66,16 +67,9 @@
   text-transform: capitalize;
   z-index: 40;
 
-  text-shadow: 
-    /* 1. Bóng đổ sâu nhất: Tăng từ 6px lên 7px */ 7px 7px 0
-      #212529,
-    /* 2. Các hướng giữ nguyên (Trên và Trái) */ -3px -3px 0 #333128,
-    -4px 0 0 #333128, 0 -4px 0 #333128,
-    /* 3. Các hướng cần làm dày (Dưới và Phải): Tăng thêm 1px */ 4px -3px 0 #333128,
-    /* Góc Phải-Trên: tăng x lên 4 */ -3px 4px 0 #333128,
-    /* Góc Trái-Dưới: tăng y lên 4 */ 4px 4px 0 #333128,
-    /* Góc Phải-Dưới: tăng cả 2 lên 4 */ 5px 0 0 #333128,
-    /* Cạnh Phải: tăng từ 4 lên 5 */ 0 5px 0 #333128; /* Cạnh Dưới: tăng từ 4 lên 5 */
+  text-shadow: 7px 7px 0 #212529, -3px -3px 0 #333128, -4px 0 0 #333128,
+    0 -4px 0 #333128, 4px -3px 0 #333128, -3px 4px 0 #333128, 4px 4px 0 #333128,
+    5px 0 0 #333128, 0 5px 0 #333128;
 }
 
 .title-banner h4 {
@@ -96,7 +90,10 @@
 }
 
 #vitural-real {
-  background-image: url("../img/bg-p4.jpg");
+  background-image: url("../img/p4/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .discovery.section {
@@ -107,9 +104,9 @@
 
 #vitural-real > h4 {
   color: #fcfcfd;
-  text-shadow: 4px 4px 0 #212529;
-  -webkit-text-stroke-width: 4px;
-  -webkit-text-stroke-color: #333128;
+  text-shadow: 7px 7px 0 #212529, -3px -3px 0 #333128, -4px 0 0 #333128,
+    0 -4px 0 #333128, 4px -3px 0 #333128, -3px 4px 0 #333128, 4px 4px 0 #333128,
+    5px 0 0 #333128, 0 5px 0 #333128;
   font-family: "Lilita One";
   font-size: 60px;
   font-style: normal;
@@ -117,6 +114,7 @@
   line-height: 68px; /* 113.333% */
   text-transform: capitalize;
   text-align: center;
+  margin-top: -20px;
   /* 150% */
 }
 
@@ -124,14 +122,15 @@
   color: #ffd502;
   text-align: center;
 
-  /* H4 */
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #333128;
+  text-shadow: -2px -2px 0 #333128, 2px -2px 0 #333128, -2px 2px 0 #333128,
+    2px 2px 0 #333128, -2px 0 0 #333128, 2px 0 0 #333128, 0 -2px 0 #333128,
+    0 2px 0 #333128;
   font-family: "Lilita One";
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  margin-top: 20px;
   /* 120% */
 }
 
@@ -148,7 +147,72 @@
   line-height: 24px;
   /* 150% */
 }
+#vitural-real .container {
+  margin-top: -100px;
+}
+.viewer-path {
+  margin-top: 380px;
+  margin-left: 230px;
+}
+#vitural-real-svg2 {
+  display: none;
+}
+.land1,
+.land2,
+.land3,
+.land4,
+.land5,
+.land6 {
+  position: absolute;
+  width: 25%;
+  float: none;
+  text-align: center;
+}
 
+.land1 {
+  top: 13%;
+  left: 7%;
+}
+
+.land2 {
+  top: 54%;
+  left: 18%;
+}
+
+.land3 {
+  top: 15%;
+  left: 34%;
+}
+
+.land4 {
+  top: 50%;
+  left: 48%;
+}
+.land5 {
+  top: 62%;
+  left: 72%;
+}
+.land6 {
+  top: 20%;
+  left: 85%;
+}
+#viewer,
+#viewer2,
+#viewer3,
+#viewer4 {
+  width: 243px;
+  transform: translateY(80px);
+}
+.viewer-land {
+  width: 193px;
+  /* margin-top: -60px; */
+}
+#viewer-gate {
+  width: 170px;
+}
+#viewer-memaland {
+  width: 339px;
+}
 .discovery.section .col-lg-4.content-col {
   text-align: center;
 }
@@ -204,7 +268,8 @@
 }
 
 .body-culture.body-culture2 .shadow img {
-  width: 90%;
+  width: 100%;
+  margin: 0px 2px;
 }
 
 .pepe_game {
@@ -238,10 +303,9 @@
 .footer-culture h5 {
   color: #fcfcfd;
   text-align: center;
-  text-shadow: 2px 2px 0 #212529;
-  /* H4 */
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #333128;
+  text-shadow: -2px -2px 0 #333128, 2px -2px 0 #333128, -2px 2px 0 #333128,
+    2px 2px 0 #333128, -2px 0 0 #333128, 2px 0 0 #333128, 0 -2px 0 #333128,
+    0 2px 0 #333128, 4px 1px 0 #212529;
   font-family: "Lilita One";
   font-size: 20px;
   font-style: normal;
@@ -256,7 +320,7 @@
   text-shadow: 0 2px 4px #000;
   /* body */
   font-family: Poppins;
-  font-size: 16px;
+  font-size: 16px !important;
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
@@ -277,12 +341,12 @@
 }
 
 .earth-banner {
-  width: 424px;
+  width: 450px;
   z-index: 0;
 }
 
 .over-earth-banner {
-  width: 424px;
+  width: 450px;
 }
 
 /* Active header nav style with gradient background */
@@ -319,9 +383,9 @@
 
 #hub > h4 {
   color: #fcfcfd;
-  text-shadow: 4px 4px 0 #212529;
-  -webkit-text-stroke-width: 4px;
-  -webkit-text-stroke-color: #333128;
+  text-shadow: 7px 7px 0 #212529, -3px -3px 0 #333128, -4px 0 0 #333128,
+    0 -4px 0 #333128, 4px -3px 0 #333128, -3px 4px 0 #333128, 4px 4px 0 #333128,
+    5px 0 0 #333128, 0 5px 0 #333128;
   font-family: "Lilita One";
   font-size: 60px;
   font-style: normal;
@@ -337,13 +401,13 @@
   border-radius: 16px;
   border: 5px solid #39d617;
   background: #1eb811;
-  width: 400px;
-  padding: 25px;
+  width: 441px;
+  padding: 16px;
   margin-top: 20px;
 }
 
 .des-join {
-  width: 400px;
+  width: 441px;
   color: #fff;
   text-shadow: 0 2px 4px #000;
 
@@ -371,27 +435,27 @@
 }
 
 .icon-map-p3.sword {
-  top: 20%;
-  left: 15%;
-  width: 40px;
+  top: 30%;
+  left: 10%;
+  width: 80px;
 }
 
 .icon-map-p3.trophy {
-  top: 60%;
-  left: 30%;
-  width: 50px;
+  top: 57%;
+  left: 25%;
+  width: 80px;
 }
 
 .icon-map-p3.sword_location {
   top: 55%;
-  left: 45%;
-  width: 50px;
+  left: 40%;
+  width: 80px;
 }
 
 .icon-map-p3.game_location {
   top: 42%;
   left: 55%;
-  width: 50px;
+  width: 70px;
 }
 
 .row.map-earth-meme {
@@ -400,29 +464,30 @@
 }
 
 .icon-map-p3.trophy_location {
-  top: 55%;
-  left: 65%;
-  width: 50px;
+  top: 62%;
+  left: 66%;
+  width: 70px;
 }
 
 .icon-map-p3.game {
   top: 40%;
-  left: 75%;
-  width: 65px;
+  left: 74%;
+  width: 110px;
 }
 
 #hub {
-  height: 790px;
+  height: 837px;
+  padding-top: 90px;
 }
 
 #hub .earth-bg-banner,
 #hub .earth-banner,
 #hub .over-earth-banner {
-  width: 220px;
+  width: 250px;
 }
 
 #hub .earth-bg-banner {
-  width: 190px;
+  width: 220px;
 }
 
 .map-earth-meme .col-lg-12.content-col {
@@ -444,8 +509,21 @@
 
 .map-earth-meme-list {
   position: relative;
+  margin-top: -100px;
 }
-
+#mema-p3 {
+  width: 172px;
+}
+#doge-p3 {
+  width: 208px;
+}
+#pepe-p3 {
+  width: 147px;
+}
+#doge2-p3 {
+  width: 150px;
+  transform: translate(50px, -30px);
+}
 .view-earth {
   position: absolute;
   left: 50%;
@@ -453,21 +531,27 @@
   opacity: 0.5;
   top: 50px;
 }
-
+#hub .row {
+  padding-top: 50px;
+}
+#hub .map {
+  transform: translateY(-70px);
+}
 .bring h4,
 .join h4 {
   color: #fcfcfd;
-  text-shadow: 2px 2px 0 #212529;
 
-  /* H4 */
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #333128;
+  text-shadow: 3px 3px 0 #212529,
+    /* Viền xung quanh dày 2px (Đã điều chỉnh tất cả các giá trị #333128 lên 2px) */ -2px -2px
+      0 #333128,
+    -2px 0 0 #333128, 0 -2px 0 #333128, 2px -2px 0 #333128, -2px 2px 0 #333128,
+    2px 2px 0 #333128, 2px 0 0 #333128, 0 2px 0 #333128;
+
   font-family: "Lilita One";
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  /* 120% */
 }
 
 .bring p,
@@ -772,6 +856,7 @@ h4 {
 
 .header .logo img {
   margin-right: 8px;
+  padding-right: 40px;
 }
 
 .header .logo h1 {
@@ -1063,7 +1148,7 @@ h4 {
     color: #fff;
     position: absolute;
     font-size: 32px;
-    top: 15px;
+    top: 23px;
     right: 15px;
     margin-right: 0;
     z-index: 9999;
@@ -1085,9 +1170,7 @@ h4 {
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Global Footer
---------------------------------------------------------------*/
+
 .footer {
   color: var(--default-color);
   background-color: var(--background-color);
@@ -1157,7 +1240,7 @@ h4 {
 }
 
 .footer h4 {
-  font-weight: bold;
+  font-weight: 500;
   position: relative;
   padding-bottom: 12px;
 }
@@ -2225,7 +2308,7 @@ section,
   opacity: 1;
   font-weight: 400;
   transition: background-position 0.5s ease;
-  /* smooth */
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .building-block-2 .game-button:hover,
@@ -2262,15 +2345,16 @@ section,
 }
 
 .building-block-2 .game-title {
+  text-shadow: 0 2px 4px #000;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
   color: white;
 }
 
 .building-block-2 .game-subtitle {
   font-size: 18px;
   color: white;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .building-block-2 .arrow {
@@ -2441,6 +2525,7 @@ section,
   line-height: 1.6;
   margin-bottom: 16px;
   max-width: 500px;
+  font-weight: 500px;
 }
 
 .building-block-1 .reviews-section {
@@ -2493,7 +2578,7 @@ section,
   align-items: center;
   gap: 8px;
   color: #333;
-  font-weight: 600;
+  font-weight: 400px;
 }
 
 .building-block-1 .star {
@@ -2788,4 +2873,1490 @@ section.partner {
   transform: scale(1.2);
   /* phóng to 120% */
   cursor: pointer;
+}
+
+/* =========================================
+   HEADER & MENU 
+   ========================================= */
+@media (max-width: 767.98px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  h1 {
+    font-size: 2.2rem !important;
+  }
+  h2 {
+    font-size: 1.8rem !important;
+  }
+  h3 {
+    font-size: 1.5rem !important;
+  }
+  h4 {
+    font-size: 1.3rem !important;
+  }
+  p {
+    font-size: 0.95rem !important;
+    line-height: 1.5;
+  }
+  .container {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  .header .header-container {
+    position: relative;
+    justify-content: space-between !important;
+    padding: 5px 15px !important;
+    margin: 0 !important;
+    align-items: center;
+    height: 60px;
+  }
+  .header .logo {
+    position: absolute;
+    left: 53%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 !important;
+    z-index: 10;
+  }
+  .header .logo img {
+    padding-right: 0px !important;
+  }
+  .header .logo img {
+    width: 55px !important;
+    padding: 0 !important;
+  }
+  .mobile-nav-toggle {
+    display: block !important;
+    color: #000000 !important;
+    font-size: 32px !important;
+    margin-right: 0 !important;
+    cursor: pointer;
+    z-index: 10001;
+  }
+  .header a > img[src*="buyland.png"] {
+    width: 120px !important;
+    height: auto !important;
+  }
+  .navmenu ul {
+    display: none !important;
+  }
+  .mobile-nav-active .navmenu ul {
+    display: block !important;
+    position: fixed !important;
+    top: 75px !important;
+    left: 10px !important;
+    right: 10px !important;
+    background: #f8f9fa !important;
+    border-radius: 15px;
+    padding: 15px 0 !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    overflow-y: auto;
+    height: 30vh;
+  }
+  .navmenu .nav-link {
+    color: #333333 !important;
+    font-family: "Lilita One", sans-serif;
+    font-size: 1.3rem !important;
+    text-align: center;
+    justify-content: center !important;
+    padding: 10px 0 !important;
+  }
+  .navmenu .nav-link:hover {
+    color: #00c1cf !important;
+  }
+  .mobile-nav-active .navmenu {
+    background: transparent !important;
+  }
+}
+
+/* =========================================
+   RESPONSIVE HERO SECTION
+   ========================================= */
+@media (max-width: 767.98px) {
+  .hero {
+    padding-top: 0px !important;
+    padding-bottom: 40px !important;
+    height: auto !important;
+    overflow: hidden;
+    margin-top: -40px;
+  }
+
+  .hero .container {
+    margin-top: 0px !important;
+  }
+
+  .hero .content-col:first-child {
+    height: 320px !important;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .earth-bg-banner,
+  .earth-banner,
+  .over-earth-banner {
+    width: 280px !important;
+    max-width: 80vw !important;
+    top: 110% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    padding: 0 !important;
+  }
+  .earth-bg-banner {
+    width: 245px !important;
+  }
+  .list-meme .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .list-meme .col-lg-6,
+  .list-meme .col-lg-4 {
+    width: 33.33% !important;
+    padding: 5px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .list-meme img {
+    width: 100% !important;
+    max-width: 70px !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  .list-meme img[src*="mema-banner.gif"] {
+    max-width: 120px !important;
+    margin-top: 0 !important;
+  }
+
+  .list-meme {
+    margin-top: -20px !important;
+    padding-top: 0 !important;
+  }
+
+  .list-meme .row:first-child {
+    display: flex;
+    justify-content: space-between !important;
+    padding: 0 20px !important;
+    margin-bottom: 10px !important;
+  }
+  .list-meme .row:first-child img {
+    width: 70px !important;
+  }
+
+  .hero-characters-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-end !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    position: relative;
+    z-index: 10;
+  }
+
+  .hero-characters-row .col-lg-4 {
+    width: auto !important;
+    padding: 0 !important;
+    flex: 0 0 auto !important;
+  }
+
+  img.hero-mema {
+    width: 140px !important;
+    transform: translate(20px, -65px) !important;
+    z-index: 20;
+    margin: 0 !important;
+  }
+
+  img.hero-penguin {
+    width: 75px !important;
+    margin-bottom: 10px !important;
+    transform: translateX(-10px) !important;
+  }
+
+  img.hero-squirrel {
+    width: 75px !important;
+    margin-bottom: 10px !important;
+    transform: translateX(10px) !important;
+  }
+
+  .title-banner {
+    transform: none !important;
+    margin-top: -90px !important;
+    position: relative !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 50;
+  }
+
+  .title-banner h4 {
+    font-size: 1.2rem !important;
+    margin-bottom: 10px;
+  }
+
+  .title-banner h2 {
+    font-size: 2rem !important;
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+
+  .title-banner p {
+    font-size: 1rem !important;
+    padding: 0 30px;
+  }
+
+  .title-banner img[src*="playnow.png"] {
+    width: 140px !important;
+    max-width: none !important;
+    transform: none !important;
+    margin-top: 10px;
+  }
+}
+
+/* =========================================
+   FIX RESPONSIVE: STEP 3 - DISCOVERY & HUB SECTION
+   ========================================= */
+@media (max-width: 767.98px) {
+  #discovery {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+    overflow: hidden;
+    margin-top: -70px;
+  }
+
+  #discovery h4 {
+    font-size: 2rem !important;
+    margin-bottom: 5px !important;
+  }
+
+  #discovery > p {
+    padding: 0 15px;
+    font-size: 0.9rem !important;
+    margin-bottom: 15px !important;
+  }
+
+  #discovery .container .row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0 10px !important;
+    padding-top: 0px !important;
+  }
+
+  #discovery .col-lg-4.content-col {
+    width: 100% !important;
+    margin-top: -70px !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  #discovery .col-lg-4.content-col:nth-child(2),
+  #discovery .col-lg-4.content-col:nth-child(3) {
+    padding-top: 0 !important;
+  }
+
+  .body-culture,
+  .footer-culture {
+    width: 59% !important;
+    position: relative;
+  }
+
+  #discovery .col-lg-4.content-col:nth-child(1) .body-culture {
+    height: 100px !important;
+  }
+  #discovery .col-lg-4.content-col:nth-child(2) .body-culture,
+  #discovery .col-lg-4.content-col:nth-child(3) .body-culture {
+    height: 100px !important;
+  }
+
+  .pepe-icon,
+  .mema-doge,
+  .penguin-flag,
+  .pepe_game,
+  .doge_game {
+    position: absolute !important;
+    z-index: 5;
+    width: auto !important;
+  }
+
+  .pepe-icon img,
+  .mema-doge img,
+  .penguin-flag img,
+  .pepe_game img,
+  .doge_game img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .pepe-icon {
+    width: 90px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 50px !important;
+    top: auto !important;
+  }
+
+  .mema-doge {
+    width: 150px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: -15px !important;
+  }
+  .mema-doge .shadow {
+    display: none !important;
+  }
+
+  .body-culture2 .pepe_game {
+    width: 50px !important;
+    left: 20% !important;
+    bottom: -5px !important;
+  }
+
+  .body-culture2 .doge_game {
+    width: 45px !important;
+    left: auto !important;
+    right: 20% !important;
+    bottom: -5px !important;
+  }
+  .body-culture2 .shadow {
+    display: none !important;
+  }
+
+  .penguin-flag {
+    width: 120px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: -10px !important;
+    top: auto !important;
+  }
+  .penguin-flag .shadow {
+    display: none !important;
+  }
+
+  .footer-culture {
+    margin-top: 0 !important;
+    padding: 10px 5px !important;
+    border-radius: 10px !important;
+    border-width: 2px !important;
+    height: 80px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-culture h5 {
+    font-size: 1.2rem !important;
+    line-height: 1.2 !important;
+    margin-bottom: 3px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .footer-culture p {
+    font-size: 0.7rem !important;
+    line-height: 1.2 !important;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* =========================================
+   HUB SECTION 
+   ========================================= */
+@media (max-width: 767.98px) {
+  #hub {
+    padding-top: 10px !important;
+    padding-bottom: 20px !important;
+    overflow: hidden;
+  }
+  #hub .row {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+  }
+  #hub h4 {
+    font-size: 2rem !important;
+    text-shadow: 4px 4px 0 #212529, -2px -2px 0 #333128, -2px 0 0 #333128,
+      0 -2px 0 #333128, 2px -2px 0 #333128, -2px 2px 0 #333128,
+      2px 2px 0 #333128 !important;
+    padding: 5px 0px;
+    margin-bottom: 10px !important;
+    line-height: 1.2;
+  }
+  .bring,
+  .join {
+    width: 100% !important;
+    max-width: 350px !important;
+    margin: 0 auto 5px auto !important;
+    padding: 5px 10px !important;
+    border-radius: 10px !important;
+    border-width: 2px !important;
+    height: auto !important;
+  }
+  #hub .bring h4,
+  #hub .join h4 {
+    font-size: 14px !important;
+    margin-bottom: 2px !important;
+    line-height: 1.2 !important;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+      -1px 1px 0 #000 !important;
+  }
+  .bring p,
+  .join p {
+    font-size: 0.8rem !important;
+    line-height: 1.3 !important;
+  }
+  .des-join {
+    width: 100% !important;
+    font-size: 0.75rem !important;
+    margin-top: 5px !important;
+    padding: 0 10px;
+    opacity: 0.8;
+  }
+  #hub a img {
+    width: 110px !important;
+    margin: 10px auto 0 auto !important;
+    display: block;
+  }
+  #hub .map {
+    transform: none !important;
+    margin-top: 15px !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  .row.map-p3 {
+    margin: 0 !important;
+    transform: scale(1);
+  }
+  .icon-map-p3 {
+    width: 40px !important;
+  }
+  .icon-map-p3.game {
+    width: 50px !important;
+  }
+  .row.map-earth-meme {
+    margin-top: 20px !important;
+    height: 220px !important;
+    position: relative !important;
+    display: block !important;
+  }
+  .map-earth-meme .col-lg-12.content-col {
+    position: relative !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  #hub .view-earth,
+  #hub .earth-bg-banner,
+  #hub .earth-banner,
+  #hub .over-earth-banner {
+    display: block !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    width: 155px !important;
+  }
+  .map-earth-meme-list {
+    position: relative;
+    margin-top: -10px !important;
+  }
+  #hub .earth-bg-banner {
+    width: 138px !important;
+  }
+  #mema-p3 {
+    width: 115px;
+  }
+  #doge-p3 {
+    width: 135px;
+    transform: translate(170px, -100px);
+  }
+  #pepe-p3 {
+    width: 105px;
+    transform: translate(-30px, -70px);
+  }
+  #doge2-p3 {
+    width: 100px;
+    transform: translate(200px, -220px);
+  }
+}
+
+/* =========================================
+   FIX RESPONSIVE: VIRTUAL REAL SECTION
+   ========================================= */
+@media (max-width: 767.98px) {
+  #vitural-real {
+    padding-top: 30px !important;
+    padding-bottom: 40px !important;
+    background-size: cover;
+    height: 1400px !important;
+    overflow: hidden;
+  }
+
+  #vitural-real .container {
+    margin-top: 0 !important;
+    padding: 0 15px !important;
+  }
+
+  #vitural-real > h4 {
+    font-size: 1.6rem !important;
+    line-height: 1.2 !important;
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+    padding: 0 10px;
+  }
+
+  #vitural-real > h5 {
+    font-size: 1.1rem !important;
+    margin-top: 5px !important;
+    padding: 0 15px;
+    line-height: 1.3;
+  }
+
+  #vitural-real > p {
+    font-size: 0.9rem !important;
+    padding: 0 20px;
+    margin-bottom: 15px !important;
+    line-height: 1.4;
+  }
+
+  #vitural-real a img {
+    width: 130px !important;
+    display: block !important;
+    margin: 15px auto !important;
+  }
+
+  .viewer-path {
+    display: block !important;
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+
+    transform: none !important;
+    margin: 0 !important;
+    z-index: 0 !important;
+    opacity: 0.6 !important;
+    pointer-events: none;
+  }
+  #vitural-real-svg1 {
+    display: none;
+  }
+  #vitural-real-svg2 {
+    display: block;
+  }
+  .viewer-path svg {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }
+  #vitural-real .row {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 400px !important;
+    height: 900px !important;
+    margin: 0 auto !important;
+    display: block !important;
+    margin-top: 250px !important;
+  }
+
+  .land1,
+  .land2,
+  .land3,
+  .land4,
+  .land5,
+  .land6 {
+    position: absolute !important;
+    width: 160px !important;
+    transform: translate(-50%, -50%) !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 2;
+
+    display: block;
+  }
+
+  #viewer,
+  #viewer2,
+  #viewer3,
+  #viewer4,
+  #viewer-gate,
+  #viewer-memaland {
+    width: 100% !important;
+    display: block;
+  }
+  .viewer-land {
+    width: 100% !important;
+    margin-top: 30px !important;
+  }
+  .land1 {
+    top: 75% !important;
+    left: 65% !important;
+  }
+
+  .land2 {
+    top: 48% !important;
+    left: 30% !important;
+  }
+
+  .land3 {
+    top: 30% !important;
+    left: 75% !important;
+  }
+
+  .land4 {
+    top: 8% !important;
+    left: 20% !important;
+  }
+
+  .land5 {
+    width: 120px !important;
+    top: -10% !important;
+    left: 60% !important;
+  }
+
+  .land5,
+  .land6 {
+    width: 80% !important;
+    margin-top: 10px !important;
+  }
+
+  #viewer-gate {
+    width: 50% !important;
+    margin: 0 auto;
+  }
+
+  #viewer-memaland {
+    display: none;
+    width: 90% !important;
+    margin: 0 auto;
+  }
+}
+/* =========================================
+   Small Mobile < 420px
+   ========================================= */
+@media (max-width: 420px) {
+  .land1 {
+    left: 65% !important;
+    top: 72% !important;
+  }
+
+  .land2 {
+    left: 25% !important;
+  }
+
+  .land3 {
+    left: 75% !important;
+  }
+
+  .land4 {
+    left: 25% !important;
+  }
+
+  .land5 {
+    left: 60% !important;
+  }
+
+  .land6 {
+    width: 140px !important;
+  }
+
+  #hub h4 {
+    font-size: 1.6rem !important;
+  }
+
+  .title-banner h2 {
+    font-size: 1.6rem !important;
+  }
+}
+
+/* =========================================
+   TABLET / IPAD RESPONSIVE (768px - 1199px)
+   ========================================= */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* 1. CẤU HÌNH CHUNG (Font chữ to hơn Mobile) */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  h1 {
+    font-size: 3rem !important;
+  }
+  h2 {
+    font-size: 2.5rem !important;
+  }
+  h3 {
+    font-size: 2rem !important;
+  }
+  h4 {
+    font-size: 1.6rem !important;
+  }
+  p {
+    font-size: 1.1rem !important;
+    line-height: 1.6;
+  }
+
+  .container {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+  }
+
+  /* 2. HEADER CONTAINER: Cao hơn và thoáng hơn */
+  .header .header-container {
+    position: relative;
+    justify-content: space-between !important;
+    padding: 10px 30px !important; /* Tăng padding */
+    margin: 0 !important;
+    align-items: center;
+    height: 90px !important; /* Tăng chiều cao từ 60px lên 90px */
+  }
+
+  /* 3. LOGO: Căn giữa và to hơn */
+  .header .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 !important;
+    z-index: 10;
+  }
+
+  .header .logo img {
+    width: 90px !important; /* Tăng từ 55px lên 90px cho rõ nét trên iPad */
+    padding: 0 !important;
+    padding-right: 0px !important;
+    margin-left: 100px;
+  }
+
+  /* 4. MENU ICON (Hamburger): To hơn */
+  .mobile-nav-toggle {
+    display: block !important; /* Hiện icon menu trên iPad */
+    color: #000000 !important;
+    font-size: 42px !important; /* Tăng từ 32px lên 42px */
+    margin-right: 0 !important;
+    cursor: pointer;
+    z-index: 10001;
+
+    line-height: 1 !important;
+    align-self: center !important;
+    margin-top: 8px !important;
+  }
+
+  /* 5. NÚT BUY LAND: To hơn */
+  .header a > img[src*="buyland.png"] {
+    width: 150px !important; /* Tăng từ 120px lên 150px */
+    height: auto !important;
+  }
+
+  /* 6. MENU POPUP (Dạng thẻ bài lớn) */
+  .navmenu ul {
+    display: none !important;
+  }
+
+  .mobile-nav-active .navmenu ul {
+    display: block !important;
+    position: fixed !important;
+
+    /* Căn chỉnh vị trí popup */
+    top: 105px !important; /* Cách header một khoảng (90px header + 10px) */
+    left: 120px !important; /* Cách lề nhiều hơn để tạo dáng thẻ bài ở giữa */
+    right: 120px !important;
+
+    background: #f8f9fa !important;
+    border-radius: 20px;
+    padding: 30px 0 !important; /* Padding dày hơn */
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    overflow-y: auto;
+    height: 40vh;
+  }
+
+  /* Link trong menu: Chữ to, dễ bấm */
+  .navmenu .nav-link {
+    color: #333333 !important;
+    font-family: "Lilita One", sans-serif;
+    font-size: 1.8rem !important; /* Tăng font size menu */
+    text-align: center;
+    justify-content: center !important;
+    padding: 15px 0 !important; /* Khoảng cách giữa các dòng thoáng hơn */
+  }
+
+  .navmenu .nav-link:hover {
+    color: #00c1cf !important;
+  }
+
+  .mobile-nav-active .navmenu {
+    background: transparent !important;
+  }
+
+  /* --- 2. HERO SECTION (TABLET - Styled like Mobile) --- */
+
+  .hero {
+    padding-top: 100px !important; /* Tạo khoảng trống phía trên cho nhân vật */
+    padding-bottom: 40px !important;
+    margin-top: -90px !important; /* Margin âm để kéo section đè lên phần đen của header */
+    height: auto !important;
+    min-height: 700px !important; /* Đảm bảo độ cao tối thiểu để background phủ hết */
+    position: relative !important; /* Quan trọng: Để làm mốc cho background */
+    overflow: hidden !important;
+  }
+
+  .hero .container {
+    margin-top: 0 !important;
+    position: relative;
+    z-index: 2; /* Đưa nội dung nổi lên trên hình nền */
+  }
+  .hero-elipse {
+    position: absolute !important;
+    top: 0 !important; /* Kéo lên tận đỉnh section */
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important; /* Phủ kín chiều cao */
+    transform: none !important; /* Reset các lệnh dịch chuyển cũ */
+    z-index: 0 !important; /* Nằm dưới cùng */
+  }
+
+  /* Cấu hình ảnh bên trong div nền */
+  .hero-elipse img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important; /* Co giãn ảnh để lấp đầy không gian mà không bị méo */
+    object-position: center top !important; /* Ưu tiên hiển thị phần trên của ảnh */
+  }
+
+  /* 1. TRÁI ĐẤT (Thu nhỏ bớt so với hiện tại, nhưng to hơn mobile) */
+  .hero .content-col:first-child {
+    height: 300px !important;
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+  }
+
+  /* Giảm size Trái đất chút xíu để vừa vặn hơn */
+  .earth-bg-banner,
+  .earth-banner,
+  .over-earth-banner {
+    width: 300px !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+  .earth-bg-banner {
+    width: 270px !important;
+  }
+
+  /* 2. CÁC NHÂN VẬT (Sắp xếp giống hệt Mobile) */
+  .list-meme {
+    margin-top: -30px !important;
+  }
+
+  /* Hàng trên cùng (Pepe & Doge) */
+  .list-meme .row:first-child {
+    display: flex !important;
+    flex-direction: row !important; /* Bắt buộc xếp ngang */
+    justify-content: space-between !important; /* Đẩy dạt sang 2 bên */
+    flex-wrap: nowrap !important; /* Không cho xuống dòng */
+
+    width: 100% !important;
+    margin: 0 0 !important; /* Căn giữa và tạo khoảng cách đáy */
+    padding: 0 100px !important;
+  }
+
+  .list-meme .row:first-child img {
+    width: 120px !important; /* To hơn mobile (70px) */
+  }
+  #doge-p1 {
+    transform: translate(40px, -50px);
+  }
+  #pepe-p1 {
+    transform: translate(-190px, -40px);
+  }
+  /* Hàng nhân vật chính (Penguin - Mema - Squirrel) */
+  .hero-characters-row {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-end !important;
+    width: 80% !important; /* Giới hạn chiều rộng để không bị xa quá */
+    max-width: 600px !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    position: relative;
+    z-index: 10;
+  }
+
+  .hero-characters-row .col-lg-4 {
+    width: auto !important;
+    padding: 0 !important;
+    flex: 0 0 auto !important;
+  }
+
+  /* Mema (Giữa) */
+  img.hero-mema {
+    width: 140px !important; /* To hơn mobile (140px) */
+    transform: translate(25px, -120px) !important; /* Bay cao hơn */
+    z-index: 20;
+    margin: 0 !important;
+  }
+
+  /* Penguin (Trái) */
+  img.hero-penguin {
+    width: 110px !important; /* To hơn mobile (75px) */
+    margin-bottom: 10px !important;
+    transform: translate(40px, -100px) !important;
+  }
+
+  /* Squirrel (Phải) */
+  img.hero-squirrel {
+    width: 110px !important; /* To hơn mobile (75px) */
+    margin-bottom: 10px !important;
+    transform: translate(-40px, -100px) !important;
+  }
+
+  /* 3. TEXT & BUTTON (Kéo lên sát nhân vật) */
+  .title-banner {
+    transform: none !important;
+    margin-top: -50px !important; /* Margin âm lớn để kéo sát lên */
+    position: relative !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 50;
+    transform: translateY(-120px) !important;
+  }
+
+  .title-banner h4 {
+    font-size: 1.5rem !important;
+    margin-bottom: 10px;
+  }
+
+  .title-banner h2 {
+    font-size: 3rem !important; /* Font to cho iPad */
+    line-height: 1.2;
+    margin-bottom: 15px;
+    padding: 0 20px;
+  }
+
+  .title-banner p {
+    font-size: 1.2rem !important;
+    padding: 0 30px;
+  }
+
+  .title-banner img[src*="playnow.png"] {
+    width: 180px !important;
+    max-width: none !important;
+    transform: none !important;
+    margin-top: 15px;
+  }
+
+  /* --- 3. DISCOVERY SECTION (TABLET - Vertical Layout like Mobile) --- */
+
+  #discovery {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    overflow: hidden;
+    margin-top: 0px !important;
+  }
+
+  #discovery h4 {
+    font-size: 2.5rem !important;
+    margin-bottom: 10px !important;
+  }
+
+  #discovery > p {
+    padding: 0 40px;
+    font-size: 1.2rem !important;
+    margin-bottom: 0px !important;
+  }
+
+  #discovery .container .row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding: 0 !important;
+  }
+
+  #discovery .col-lg-4.content-col {
+    width: 100% !important;
+    margin-bottom: 50px !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  #discovery .col-lg-4.content-col:nth-child(2),
+  #discovery .col-lg-4.content-col:nth-child(3) {
+    padding-top: 0 !important;
+  }
+
+  .body-culture,
+  .footer-culture {
+    width: 70% !important;
+    min-width: 350px !important;
+    position: relative;
+  }
+
+  #discovery .col-lg-4.content-col:nth-child(1) .body-culture,
+  #discovery .col-lg-4.content-col:nth-child(2) .body-culture,
+  #discovery .col-lg-4.content-col:nth-child(3) .body-culture {
+    height: 110px !important;
+  }
+
+  .pepe-icon,
+  .mema-doge,
+  .penguin-flag,
+  .pepe_game,
+  .doge_game {
+    position: absolute !important;
+    z-index: 5;
+    width: auto !important;
+  }
+
+  .pepe-icon img,
+  .mema-doge img,
+  .penguin-flag img,
+  .pepe_game img,
+  .doge_game img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .body-culture1 {
+    padding-top: 50px;
+  }
+  .pepe-icon {
+    width: 160px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: 70px !important;
+    top: auto !important;
+  }
+
+  .mema-doge {
+    width: 250px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: -25px !important;
+  }
+  .mema-doge .shadow {
+    display: none !important;
+  }
+
+  .body-culture2 .pepe_game {
+    width: 110px !important;
+    left: 20% !important;
+    bottom: -10px !important;
+  }
+
+  .body-culture2 .doge_game {
+    width: 100px !important;
+    left: auto !important;
+    right: 20% !important;
+    bottom: -10px !important;
+  }
+  .body-culture2 .shadow {
+    display: none !important;
+  }
+
+  .penguin-flag {
+    width: 230px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    bottom: -15px !important;
+    top: auto !important;
+  }
+  .penguin-flag .shadow {
+    display: none !important;
+  }
+
+  .footer-culture {
+    margin-top: 0 !important;
+    padding: 30px 10px !important;
+    border-radius: 15px !important;
+    border-width: 3px !important;
+    height: 180px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-culture h5 {
+    font-size: 2rem !important;
+    line-height: 1.3 !important;
+    margin-bottom: 5px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .footer-culture p {
+    font-size: 1.3rem !important;
+    line-height: 1.4 !important;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* --- 4. HUB SECTION (TABLET - Styled like Mobile but Bigger) --- */
+
+  #hub {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    overflow: hidden;
+    height: auto !important;
+  }
+
+  #hub .row {
+    margin-top: 0px !important;
+    padding-top: 0px !important;
+  }
+
+  #hub h4 {
+    font-size: 3rem !important;
+    padding: 10px 0px;
+    margin-bottom: 20px !important;
+    line-height: 1.2;
+    text-shadow: 4px 4px 0 #212529, -2px -2px 0 #333128, -2px 0 0 #333128,
+      0 -2px 0 #333128, 2px -2px 0 #333128, -2px 2px 0 #333128,
+      2px 2px 0 #333128 !important;
+  }
+
+  .bring,
+  .join {
+    width: 100% !important;
+    max-width: 600px !important;
+    margin: 0 auto 15px auto !important;
+    padding: 15px 20px !important;
+    border-radius: 15px !important;
+    border-width: 4px !important;
+    height: auto !important;
+  }
+
+  #hub .bring h4,
+  #hub .join h4 {
+    font-size: 1.6rem !important;
+    margin-bottom: 5px !important;
+    line-height: 1.3 !important;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+      -1px 1px 0 #000 !important;
+  }
+
+  .bring p,
+  .join p {
+    font-size: 1.1rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .des-join {
+    width: 100% !important;
+    font-size: 1rem !important;
+    margin-top: 15px !important;
+    padding: 0 20px;
+    opacity: 0.9;
+  }
+
+  #hub a img {
+    width: 160px !important;
+    margin: 20px auto 0 auto !important;
+    display: block;
+  }
+
+  #hub .map {
+    transform: none !important;
+    margin-top: 40px !important;
+    padding: 0 !important;
+    width: 90% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .row.map-p3 {
+    margin: 0 !important;
+    transform: scale(1);
+  }
+
+  .icon-map-p3 {
+    width: 60px !important;
+  }
+
+  .icon-map-p3.game {
+    width: 80px !important;
+  }
+
+  .row.map-earth-meme {
+    margin-top: 40px !important;
+    height: 350px !important;
+    position: relative !important;
+    display: block !important;
+  }
+
+  .map-earth-meme .col-lg-12.content-col {
+    position: relative !important;
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  #hub .view-earth,
+  #hub .earth-bg-banner,
+  #hub .earth-banner,
+  #hub .over-earth-banner {
+    display: block !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+    width: 280px !important;
+  }
+
+  #hub .earth-bg-banner {
+    width: 250px !important;
+  }
+
+  .map-earth-meme-list {
+    position: relative;
+    margin-top: 100px !important;
+  }
+
+  #mema-p3 {
+    width: 180px;
+    transform: translateX(-30px);
+  }
+
+  #doge-p3 {
+    width: 200px;
+    transform: translate(320px, -160px);
+  }
+
+  #pepe-p3 {
+    width: 150px;
+    transform: translate(-10px, -140px);
+  }
+
+  #doge2-p3 {
+    width: 140px;
+    transform: translate(300px, -390px);
+  }
+
+  /* Vitural Real  */
+
+  #vitural-real > h4 {
+    font-size: 3rem !important;
+    line-height: 1.3 !important;
+    margin-top: 0 !important;
+    margin-bottom: 10px !important;
+    padding: 0 10px;
+  }
+
+  #vitural-real > h5 {
+    font-size: 1.5rem !important;
+    margin-top: 5px !important;
+    padding: 0 15px;
+    line-height: 1.3;
+  }
+
+  #vitural-real > p {
+    font-size: 1.3rem !important;
+    padding: 0 20px;
+    margin-bottom: 15px !important;
+    line-height: 1.4;
+  }
+  #vitural-real a img {
+    width: 180px !important;
+    display: block !important;
+    margin: 15px auto !important;
+  }
+  #vitural-real-svg1 {
+    transform: scale(0.7) translate(-450px, 0px);
+  }
+  .land1,
+  .land2,
+  .land3,
+  .land4,
+  .land5,
+  .land6 {
+    position: absolute;
+    width: 25% !important;
+    float: none;
+    text-align: center;
+  }
+
+  .land1 {
+    top: 30%;
+    left: 2%;
+  }
+
+  .land2 {
+    top: 60%;
+    left: 17%;
+  }
+
+  .land3 {
+    top: 32%;
+    left: 34%;
+  }
+
+  .land4 {
+    top: 55%;
+    left: 53%;
+  }
+  .land5 {
+    top: 50%;
+    left: 80%;
+  }
+  .land6 {
+    display: none !important;
+  }
+  #viewer,
+  #viewer2,
+  #viewer3,
+  #viewer4 {
+    width: 183px;
+    transform: translate(-20px, 60px);
+  }
+  .viewer-land {
+    width: 153px;
+    /* margin-top: -60px; */
+  }
+  #viewer-gate {
+    width: 170px;
+  }
+  #viewer-memaland {
+    width: 339px;
+  }
+}
+
+/* ======================================================
+   LAPTOP SMALL / IPAD PRO LANDSCAPE (1024px - 1199px)
+   ====================================================== */
+@media (min-width: 1024px) and (max-width: 1199.98px) {
+  .header .header-container {
+    position: relative;
+    justify-content: space-between !important;
+    padding: 10px 30px !important; /* Tăng padding */
+    margin: 0 !important;
+    align-items: center;
+    height: 90px !important; /* Tăng chiều cao từ 60px lên 90px */
+  }
+
+  /* 3. LOGO: Căn giữa và to hơn */
+  .header .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 !important;
+    z-index: 10;
+  }
+
+  .header .logo img {
+    width: 90px !important; /* Tăng từ 55px lên 90px cho rõ nét trên iPad */
+    padding: 0 !important;
+    padding-right: 0px !important;
+    margin-left: 100px;
+  }
+
+  /* 4. MENU ICON (Hamburger): To hơn */
+  .mobile-nav-toggle {
+    display: block !important; /* Hiện icon menu trên iPad */
+    color: #000000 !important;
+    font-size: 42px !important; /* Tăng từ 32px lên 42px */
+    margin-right: 0 !important;
+    cursor: pointer;
+    z-index: 10001;
+
+    line-height: 1 !important;
+    align-self: center !important;
+    margin-top: 8px !important;
+  }
+
+  /* 5. NÚT BUY LAND: To hơn */
+  .header a > img[src*="buyland.png"] {
+    width: 200px !important; /* Tăng từ 120px lên 150px */
+    height: auto !important;
+  }
+
+  /* 6. MENU POPUP (Dạng thẻ bài lớn) */
+  .navmenu ul {
+    display: none !important;
+  }
+
+  .mobile-nav-active .navmenu ul {
+    display: block !important;
+    position: fixed !important;
+
+    /* Căn chỉnh vị trí popup */
+    top: 105px !important; /* Cách header một khoảng (90px header + 10px) */
+    left: 120px !important; /* Cách lề nhiều hơn để tạo dáng thẻ bài ở giữa */
+    right: 120px !important;
+
+    background: #f8f9fa !important;
+    border-radius: 20px;
+    padding: 30px 0 !important; /* Padding dày hơn */
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    z-index: 9999;
+    overflow-y: auto;
+    height: 40vh;
+  }
+
+  /* Link trong menu: Chữ to, dễ bấm */
+  .navmenu .nav-link {
+    color: #333333 !important;
+    font-family: "Lilita One", sans-serif;
+    font-size: 2rem !important; /* Tăng font size menu */
+    text-align: center;
+    justify-content: center !important;
+    padding: 15px 0 !important; /* Khoảng cách giữa các dòng thoáng hơn */
+  }
+
+  .navmenu .nav-link:hover {
+    color: #00c1cf !important;
+  }
+
+  .mobile-nav-active .navmenu {
+    background: transparent !important;
+  }
+
+  .map-p3 {
+    transform: scale(0.9) translateX(50px);
+  }
+  #vitural-real-svg1 {
+    transform: translateX(-180px);
+  }
+  .land1 {
+    left: -3%;
+  }
+  .land2 {
+    left: 12%;
+  }
+  .land4 {
+    left: 50%;
+  }
+  .land5 {
+    top: 50%;
+    left: 79%;
+  }
+  .land6 {
+    display: none;
+  }
 }
