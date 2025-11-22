@@ -12,6 +12,12 @@
   align-items: center;
 }
 
+#portal .button-play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #portal > h4 {
   color: #fcfcfd;
   text-shadow: 7px 7px 0 #212529, -3px -3px 0 #333128, -4px 0 0 #333128,
@@ -445,77 +451,485 @@
 
 /* Mobile */
 @media (max-width: 767px) {
+  /* SECTION PORTAL */
   #portal {
-    background-image: url("../img/p5/background.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    height: 1000px;
-  }
-
-  #portal .container-p5 {
-    margin-top: -100px;
-    width: 100%;
-  }
-
-  #portal .relative {
-    position: relative;
-  }
-
-  #portal .absolute {
-    position: absolute;
-    top: -10%;
-    left: 0;
-    right: 0;
-    height: 275px;
-    width: 115%;
-    background-image: url("../img/p5/cloud.png");
+    padding: 60px 0 40px;
+    background-image: url("../img/bg-banner.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    z-index: -1;
+    height: 1750px;
   }
 
-  .container-p5 .image-gate {
-    width: 100px;
-    height: 50px;
-  }
-
+  /* Container tổng cho 3 cổng */
   #portal .content-gate {
+    display: flex;
+    flex-direction: column; /* xếp DỌC */
+    gap: 24px;
     width: 100%;
-    margin-top: 12.75%;
-    gap: 10%;
+    margin-top: 16px;
+    padding: 0 16px;
+    margin-top: 150px;
   }
 
-  #portal .image-relative {
+  /* CARD CỔNG */
+  #portal .content-gate > div {
+    width: 100%;
+    max-width: 380px;
+    margin: auto;
+    padding: 20px 0 32px;
+
     position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* tạo cảm giác card */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   }
 
+  /* Background riêng cho từng cổng */
+  #portal .content-gate > div:nth-child(1) {
+    background-image: url("./assets/img/p5/bg_play_mobile.png");
+  }
+
+  #portal .content-gate > div:nth-child(2) {
+    background-image: url("./assets/img/p5/bg_ninja_mobile.png");
+  }
+
+  #portal .content-gate > div:nth-child(3) {
+    background-image: url("./assets/img/p5/bg_gather_mobile.png");
+  }
+  /* KHUNG CỔNG */
+  #portal .image-gate {
+    width: 80%; /* thu nhỏ lại cho mobile */
+    display: block;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  /* Nhân vật bên trong gate */
   #portal .image-absolute {
     position: absolute;
-    left: 55px;
-    right: 55px;
-    bottom: 35px;
+    bottom: 10%; /* vị trí tương đối cho đẹp */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
   }
 
+  #portal .image-absolute img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Shadow trong cổng */
   #portal .image-absolute-2 {
     position: absolute;
-    left: 100px;
-    right: 100px;
-    bottom: 35px;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
   }
 
-  #portal .image-absolute > img {
+  #portal .image-absolute-2 img {
     width: 100%;
-    height: 300px;
+    height: auto;
   }
 
-  #portal .image-absolute-2 > img {
-    width: 100%;
-    height: 50px;
+  /* Bỏ phần absolute lớn phía dưới */
+  #portal .absolute {
+    display: none;
+  }
+
+  /* ROADMAP */
+  #roadmap {
+    padding-top: 20px;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+  }
+
+  #roadmap .title-relative {
+    position: relative;
+    left: auto;
+    transform: none;
+    margin-bottom: 30px;
+    padding: 0 15px;
+  }
+
+  #roadmap .title-relative > h4 {
+    font-size: 2.2rem !important;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+
+  #roadmap .title-relative > h5 {
+    font-size: 1.2rem !important;
+    margin-top: 5px;
+    line-height: 1.3;
+  }
+
+  #roadmap .title-relative > p {
+    font-size: 0.9rem;
+    padding: 0 10px;
+    line-height: 1.4;
+  }
+
+  #roadmap .container-p7 {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    gap: 30px;
+    margin-bottom: 0;
+  }
+
+  #roadmap .img-scroll {
+    width: 200px;
+    height: 240px;
+    transform: translate(-80px, 50px);
+  }
+
+  #roadmap .container-p7 .icon-absolute {
+    top: 75px;
+    left: -35px;
+  }
+
+  #roadmap .img-icon {
+    width: 40px;
+    height: 170px;
+  }
+
+  #roadmap .content-absolute {
+    top: 75px;
+    left: 10px;
+    gap: 4px;
+  }
+
+  #roadmap .title-roadmap {
+    font-size: 10px;
+  }
+
+  #roadmap .text-roadmap {
+    font-size: 5px;
+    max-width: 100px;
+    line-height: 1.2;
+  }
+
+  /* 5. PHÙ THỦY (WITCH) */
+  #roadmap div[style*="margin-top: 100px"] {
+    margin-top: 0 !important;
+  }
+
+  #roadmap .img-witch {
+    width: 200px;
+    height: auto;
+    margin-right: 0;
+    margin-left: 20px;
+    transform: translate(60px, -30px);
+  }
+
+  #earn {
+    height: 800px;
+    z-index: 1;
+  }
+
+  #earn .title-relative {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  #earn .title-relative > h4 {
+    color: #fcfcfd;
+    text-shadow: 7px 7px 0 #212529, -3px -3px 0 #333128, -4px 0 0 #333128,
+      0 -4px 0 #333128, 4px -3px 0 #333128, -3px 4px 0 #333128,
+      4px 4px 0 #333128, 5px 0 0 #333128, 0 5px 0 #333128;
+    font-family: "Lilita One";
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 68px; /* 113.333% */
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: -20px;
+  }
+
+  #earn .title-relative > h5 {
+    color: #ffd502;
+    text-align: center;
+
+    text-shadow: -2px -2px 0 #333128, 2px -2px 0 #333128, -2px 2px 0 #333128,
+      2px 2px 0 #333128, -2px 0 0 #333128, 2px 0 0 #333128, 0 -2px 0 #333128,
+      0 2px 0 #333128;
+    font-family: "Lilita One";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: -10px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #earn .title-relative > p {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 2px 4px #000;
+
+    /* body */
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    /* 150% */
+  }
+
+  #earn .image-earn1 {
+    display: none;
+  }
+
+  #earn .image-earn2 {
+    width: 400px;
+    height: 600px;
+    margin-bottom: 80px;
+    margin-left: -50px;
+  }
+
+  #earn .image-earn3 {
+    display: none;
+  }
+
+  #earn .image-earn4 {
+    display: none;
+  }
+
+  #earn .image-earn5 {
+    display: none;
+  }
+
+  #earn .image-earn6 {
+    width: 400px;
+    height: 500px;
+  }
+
+  #earn .image-earn7 {
+    width: 200px;
+    height: 100px;
+  }
+
+  #earn .content-absolute {
+    position: absolute;
+    transform: translateX(-48%);
+    bottom: -60px;
+  }
+
+  #earn .coin-absolute {
+    position: absolute;
+    left: 30%;
+    transform: translateX(-70%);
+    top: 45%;
+    transform: translateY(-65%);
   }
 }
 
 /* Tablet */
 @media (min-width: 768px) and (max-width: 1199px) {
+  #portal {
+    background-image: url("../img/p5/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: auto;
+    width: 100%;
+  }
+
+  #portal .container-p5 {
+    margin-top: 0px;
+    width: 100%;
+  }
+
+  #portal .content-gate {
+    width: 100%;
+    margin-top: 5%;
+    gap: 5%;
+  }
+
+  /* KHUNG CỔNG */
+  #portal .image-gate {
+    width: 70%; /* thu nhỏ lại cho mobile */
+    display: block;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  /* Nhân vật bên trong gate */
+  #portal .image-absolute {
+    position: absolute;
+    bottom: 10%; /* vị trí tương đối cho đẹp */
+    left: 55%;
+    transform: translateX(-45%);
+    width: 60%;
+  }
+
+  #portal .image-absolute img {
+    width: 80%;
+    height: auto;
+  }
+
+  /* Shadow trong cổng */
+  #portal .image-absolute-2 {
+    position: absolute;
+    bottom: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+  }
+
+  #portal .image-absolute-2 img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Bỏ phần absolute lớn phía dưới */
+  #portal .absolute {
+    display: none;
+  }
+
+  #roadmap .title-relative > h4 {
+    white-space: nowrap;
+  }
+  #roadmap .img-scroll {
+    width: 400px;
+    height: 450px;
+    transform: translateX(100px);
+  }
+  #roadmap .container-p7 .icon-absolute {
+    top: 15px;
+    left: 180px;
+  }
+  #roadmap .img-icon {
+    width: 80px;
+    height: 350px;
+  }
+  #roadmap .title-roadmap {
+    font-size: 14px;
+  }
+  #roadmap .text-roadmap {
+    font-size: 8px;
+    max-width: 100px;
+    line-height: 1.2;
+  }
+
+  #roadmap .content-absolute {
+    top: 35px;
+    left: 280px;
+    gap: 18px;
+  }
+  #roadmap .img-witch {
+    width: 400px;
+    height: auto;
+    margin-right: 0;
+    margin-left: 20px;
+    transform: translate(-60px, 30px);
+  }
+
+  #earn .image-earn1 {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 200px;
+    margin-left: 80px;
+  }
+
+  #earn .image-earn2 {
+    width: 600px;
+    height: 700px;
+    margin-bottom: 80px;
+    margin-left: -50px;
+  }
+
+  #earn .image-earn3 {
+    width: 250px;
+    height: 600px;
+  }
+
+  #earn .image-earn4 {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+  }
+
+  #earn .image-earn5 {
+    width: 120px;
+    height: 150px;
+  }
+
+  #earn .image-earn6 {
+    width: 600px;
+    height: 700px;
+  }
+
+  #earn .image-earn7 {
+    width: 350px;
+    height: 250px;
+  }
+
+  #earn .shadow1 {
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    bottom: 50%;
+    left: 20%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+
+  #earn .shadow4 {
+    position: absolute;
+    width: 160px;
+    height: 30px;
+    bottom: -12%;
+    left: 10%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+
+  #earn .shadow5 {
+    position: absolute;
+    width: 160px;
+    height: 30px;
+    bottom: -15%;
+    left: -30%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+
+  #earn .shadow6 {
+    position: absolute;
+    width: 350px;
+    height: 75px;
+    bottom: 23%;
+    left: 60%;
+    transform: translateY(-50%);
+    z-index: -1;
+  }
+
+  #earn .smoke-absolute {
+    position: absolute;
+    left: -155px;
+    bottom: 250px;
+  }
+
+  #earn .content-absolute {
+    position: absolute;
+    left: 60%;
+    transform: translateX(-48%);
+    bottom: -120px;
+  }
 }
