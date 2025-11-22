@@ -1,0 +1,380 @@
+/* =========================================
+   SECTION DEBATE
+   ========================================= */
+#debate {
+  /* Thiết lập ảnh nền */
+  background-image: url("../img/p8/background.png");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-top: 80px;
+  position: relative;
+  overflow: hidden; /* Để cắt phần thừa của bàn/nhân vật nếu có */
+}
+
+/* 1. Text Styles */
+.debate-content {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 10; /* Nổi lên trên */
+}
+
+.debate-content h2 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 4rem;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  line-height: 1.1;
+  /* Hiệu ứng viền chữ đen dày giống mẫu */
+  text-shadow: 4px 4px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+    -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+.debate-content h4 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 1.6rem;
+  color: #ffd502; /* Màu vàng */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 0 #000;
+}
+
+.debate-content p {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-weight: 500;
+  padding: 0 30px;
+}
+
+/* 2. Buttons */
+.debate-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+.debate-buttons img {
+  height: 55px; /* Chiều cao nút */
+  width: auto;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.debate-buttons img:hover {
+  transform: scale(1.05);
+}
+
+/* 3. Scene (Nhân vật + Bàn) */
+.debate-scene {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Chiều cao khu vực nhân vật */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Căn nhân vật xuống đáy */
+}
+
+.character-group {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  z-index: 5; /* Nhân vật nằm trên mặt bàn */
+  bottom: -20px; /* Điều chỉnh vị trí ngồi */
+}
+
+/* Tinh chỉnh từng nhân vật */
+#trump {
+  width: 300px;
+  transform: rotate(3deg) translate(-70%, -48%); /* Nghiêng nhẹ sang trái */
+  margin-right: -40px; /* Chồng lấn lên Mema */
+  z-index: 1;
+}
+
+#mema {
+  width: 240px; /* Mema to nhất ở giữa */
+  z-index: 2; /* Nổi lên trên cùng */
+  margin-bottom: 10px;
+  transform: translateY(-75%);
+}
+
+#pepe {
+  width: 300px;
+  transform: rotate(-3deg) translate(70%, -48%); /* Nghiêng nhẹ sang phải */
+  margin-left: -40px; /* Chồng lấn lên Mema */
+  z-index: 1;
+}
+
+/* =========================================
+   RESPONSIVE DEBATE SECTION (MOBILE)
+   ========================================= */
+@media (min-width: 350px) and (max-width: 420px) {
+  /* 1. Cấu hình Section & Nền */
+  #debate {
+    padding-top: 40px; /* Giảm padding trên */
+    /* Trên mobile, dùng cover để ảnh phủ kín chiều cao mà không bị méo hình */
+    background-size: cover;
+    background-position: center bottom;
+    /* Đặt chiều cao tối thiểu để đảm bảo hiển thị hết bg */
+    min-height: 600px;
+    height: auto;
+  }
+
+  /* 2. Text Styles (Thu nhỏ chữ) */
+  .debate-content {
+    margin-bottom: 20px;
+    padding: 0 15px;
+  }
+
+  .debate-content h2 {
+    font-size: 2.2rem; /* Giảm từ 4rem */
+    line-height: 1.1;
+    margin-bottom: 5px;
+  }
+
+  .debate-content h4 {
+    font-size: 1.2rem; /* Giảm từ 1.6rem */
+    margin-bottom: 15px;
+  }
+
+  .debate-content p {
+    font-size: 0.9rem; /* Giảm từ 1.1rem */
+    padding: 0; /* Bỏ padding thừa */
+    line-height: 1.4;
+  }
+
+  /* 3. Buttons */
+  .debate-buttons {
+    gap: 15px;
+    margin-bottom: 10px; /* Kéo gần lại với nhân vật */
+  }
+
+  .debate-buttons img {
+    height: 40px; /* Nút nhỏ lại (cũ 55px) */
+  }
+
+  /* 4. Scene (Khu vực nhân vật) */
+  .debate-scene {
+    height: 280px; /* Giảm chiều cao khu vực này (cũ 400px) */
+    align-items: flex-end;
+  }
+
+  .character-group {
+    bottom: 0;
+    width: 100%;
+    /* Căn giữa và cho phép xếp chồng nhẹ */
+    justify-content: center;
+  }
+
+  /* --- TINH CHỈNH NHÂN VẬT MOBILE --- */
+  /* Quan trọng: Phải reset các transform dịch chuyển lớn của Desktop */
+
+  /* Trump (Trái) */
+  #trump {
+    width: 110px; /* Giảm từ 300px */
+    /* Xóa translate(-70%) cũ, chỉ giữ xoay nhẹ và hạ thấp xuống */
+    transform: rotate(3deg) translate(-40px, -65px);
+    margin-right: -25px; /* Âm margin để đứng sát vào Mema */
+    z-index: 1;
+  }
+
+  /* Mema (Giữa) */
+  #mema {
+    width: 110px; /* Giảm từ 240px */
+    /* Xóa translate(-75%) cũ, đặt lại vị trí */
+    transform: translateY(-77px);
+    margin-bottom: 0;
+    z-index: 2; /* Ngồi trước */
+  }
+
+  /* Pepe (Phải) */
+  #pepe {
+    width: 110px; /* Giảm từ 300px */
+    /* Xóa translate(70%) cũ */
+    transform: rotate(-3deg) translate(40px, -65px);
+    margin-left: -25px; /* Âm margin để đứng sát vào Mema */
+    z-index: 1;
+  }
+}
+@media (min-width: 421px) and (max-width: 767.98px) {
+  #debate {
+    padding-top: 40px; /* Giảm padding trên */
+    /* Trên mobile, dùng cover để ảnh phủ kín chiều cao mà không bị méo hình */
+    background-size: cover;
+    background-position: center bottom;
+    /* Đặt chiều cao tối thiểu để đảm bảo hiển thị hết bg */
+    min-height: 600px;
+    height: auto;
+  }
+
+  /* 2. Text Styles (Thu nhỏ chữ) */
+  .debate-content {
+    margin-bottom: 20px;
+    padding: 0 15px;
+  }
+
+  .debate-content h2 {
+    font-size: 2.2rem; /* Giảm từ 4rem */
+    line-height: 1.1;
+    margin-bottom: 5px;
+  }
+
+  .debate-content h4 {
+    font-size: 1.2rem; /* Giảm từ 1.6rem */
+    margin-bottom: 15px;
+  }
+
+  .debate-content p {
+    font-size: 0.9rem; /* Giảm từ 1.1rem */
+    padding: 0; /* Bỏ padding thừa */
+    line-height: 1.4;
+  }
+
+  /* 3. Buttons */
+  .debate-buttons {
+    gap: 15px;
+    margin-bottom: 10px; /* Kéo gần lại với nhân vật */
+  }
+
+  .debate-buttons img {
+    height: 40px; /* Nút nhỏ lại (cũ 55px) */
+  }
+
+  /* 4. Scene (Khu vực nhân vật) */
+  .debate-scene {
+    height: 280px; /* Giảm chiều cao khu vực này (cũ 400px) */
+    align-items: flex-end;
+  }
+
+  .character-group {
+    bottom: 0;
+    width: 100%;
+    /* Căn giữa và cho phép xếp chồng nhẹ */
+    justify-content: center;
+  }
+
+  /* --- TINH CHỈNH NHÂN VẬT MOBILE --- */
+  /* Quan trọng: Phải reset các transform dịch chuyển lớn của Desktop */
+
+  /* Trump (Trái) */
+  #trump {
+    width: 110px; /* Giảm từ 300px */
+    /* Xóa translate(-70%) cũ, chỉ giữ xoay nhẹ và hạ thấp xuống */
+    transform: rotate(3deg) translate(-40px, -45px);
+    margin-right: -25px; /* Âm margin để đứng sát vào Mema */
+    z-index: 1;
+  }
+
+  /* Mema (Giữa) */
+  #mema {
+    width: 110px; /* Giảm từ 240px */
+    /* Xóa translate(-75%) cũ, đặt lại vị trí */
+    transform: translateY(-60px);
+    margin-bottom: 0;
+    z-index: 2; /* Ngồi trước */
+  }
+
+  /* Pepe (Phải) */
+  #pepe {
+    width: 110px; /* Giảm từ 300px */
+    /* Xóa translate(70%) cũ */
+    transform: rotate(-3deg) translate(40px, -45px);
+    margin-left: -25px; /* Âm margin để đứng sát vào Mema */
+    z-index: 1;
+  }
+}
+@media (max-width: 349px) {
+  #debate {
+    padding-top: 40px; /* Giảm padding trên */
+    /* Trên mobile, dùng cover để ảnh phủ kín chiều cao mà không bị méo hình */
+    background-size: cover;
+    background-position: center bottom;
+    /* Đặt chiều cao tối thiểu để đảm bảo hiển thị hết bg */
+    min-height: 600px;
+    height: auto;
+  }
+
+  /* 2. Text Styles (Thu nhỏ chữ) */
+  .debate-content {
+    margin-bottom: 20px;
+    padding: 0 15px;
+  }
+
+  .debate-content h2 {
+    font-size: 2.2rem; /* Giảm từ 4rem */
+    line-height: 1.1;
+    margin-bottom: 5px;
+  }
+
+  .debate-content h4 {
+    font-size: 1.2rem; /* Giảm từ 1.6rem */
+    margin-bottom: 15px;
+  }
+
+  .debate-content p {
+    font-size: 0.9rem; /* Giảm từ 1.1rem */
+    padding: 0; /* Bỏ padding thừa */
+    line-height: 1.4;
+  }
+
+  /* 3. Buttons */
+  .debate-buttons {
+    gap: 15px;
+    margin-bottom: 10px; /* Kéo gần lại với nhân vật */
+  }
+
+  .debate-buttons img {
+    height: 40px; /* Nút nhỏ lại (cũ 55px) */
+  }
+
+  /* 4. Scene (Khu vực nhân vật) */
+  .debate-scene {
+    height: 280px; /* Giảm chiều cao khu vực này (cũ 400px) */
+    align-items: flex-end;
+  }
+
+  .character-group {
+    bottom: 0;
+    width: 100%;
+    /* Căn giữa và cho phép xếp chồng nhẹ */
+    justify-content: center;
+  }
+
+  /* --- TINH CHỈNH NHÂN VẬT MOBILE --- */
+  /* Quan trọng: Phải reset các transform dịch chuyển lớn của Desktop */
+
+  /* Trump (Trái) */
+  #trump {
+    width: 110px; /* Giảm từ 300px */
+    /* Xóa translate(-70%) cũ, chỉ giữ xoay nhẹ và hạ thấp xuống */
+    transform: rotate(3deg) translate(-40px, -85px);
+    margin-right: -25px; /* Âm margin để đứng sát vào Mema */
+    z-index: 1;
+  }
+
+  /* Mema (Giữa) */
+  #mema {
+    width: 110px; /* Giảm từ 240px */
+    /* Xóa translate(-75%) cũ, đặt lại vị trí */
+    transform: translateY(-97px);
+    margin-bottom: 0;
+    z-index: 2; /* Ngồi trước */
+  }
+
+  /* Pepe (Phải) */
+  #pepe {
+    width: 110px; /* Giảm từ 300px */
+    /* Xóa translate(70%) cũ */
+    transform: rotate(-3deg) translate(40px, -85px);
+    margin-left: -25px; /* Âm margin để đứng sát vào Mema */
+    z-index: 1;
+  }
+}

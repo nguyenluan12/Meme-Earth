@@ -82,12 +82,12 @@
 
 .container-p5 .image-gate {
   width: 400px;
-  height: 500px;
+  height: 520px;
 }
 
 #portal .content-gate {
   width: 100%;
-  margin-top: 261px;
+  margin-top: 12.75%;
   gap: 10%;
 }
 
@@ -127,7 +127,7 @@
   background-size: cover;
   background-position: center;
   width: 100%;
-  height: 1070px;
+  height: 1150px;
   z-index: 1;
 }
 
@@ -183,9 +183,44 @@
   /* 150% */
 }
 
-#earn .image-earn {
-  width: 100px;
-  height: 100px;
+#earn .image-earn1 {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 150px;
+  margin-left: 100px;
+}
+
+#earn .image-earn2 {
+  width: 850px;
+  height: 1000px;
+  margin-bottom: 80px;
+  margin-left: 100px;
+}
+
+#earn .image-earn3 {
+  width: 250px;
+  height: 600px;
+}
+
+#earn .image-earn4 {
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+}
+
+#earn .image-earn5 {
+  width: 120px;
+  height: 150px;
+}
+
+#earn .image-earn6 {
+  width: 900px;
+  height: 1000px;
+}
+
+#earn .image-earn7 {
+  width: 350px;
+  height: 250px;
 }
 
 .flex-between {
@@ -240,4 +275,247 @@
   transform: translateX(-70%);
   top: 45%;
   transform: translateY(-65%);
+}
+
+#earn .image-relative {
+  position: relative;
+}
+
+#earn .shadow1 {
+  position: absolute;
+  width: 200px;
+  height: 30px;
+  bottom: 35%;
+  left: 20%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+#earn .shadow4 {
+  position: absolute;
+  width: 160px;
+  height: 30px;
+  bottom: -12%;
+  left: 10%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+#earn .shadow5 {
+  position: absolute;
+  width: 160px;
+  height: 30px;
+  bottom: -15%;
+  left: -30%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+#earn .shadow6 {
+  position: absolute;
+  width: 350px;
+  height: 75px;
+  bottom: 23%;
+  left: 60%;
+  transform: translateY(-50%);
+  z-index: -1;
+}
+
+/* Roadmap */
+
+#roadmap {
+  background-image: url("../img/p7/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+#roadmap .title-relative {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+#roadmap .title-relative > h4 {
+  color: #fcfcfd;
+  text-shadow: 7px 7px 0 #212529, -3px -3px 0 #333128, -4px 0 0 #333128,
+    0 -4px 0 #333128, 4px -3px 0 #333128, -3px 4px 0 #333128, 4px 4px 0 #333128,
+    5px 0 0 #333128, 0 5px 0 #333128;
+  font-family: "Lilita One";
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 68px; /* 113.333% */
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: -20px;
+}
+
+#roadmap .title-relative > h5 {
+  color: #ffd502;
+  text-align: center;
+
+  text-shadow: -2px -2px 0 #333128, 2px -2px 0 #333128, -2px 2px 0 #333128,
+    2px 2px 0 #333128, -2px 0 0 #333128, 2px 0 0 #333128, 0 -2px 0 #333128,
+    0 2px 0 #333128;
+  font-family: "Lilita One";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 20px;
+  /* 120% */
+}
+
+#roadmap .title-relative > p {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 2px 4px #000;
+
+  /* body */
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  /* 150% */
+}
+
+#roadmap .container-p7 {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  gap: 170px;
+  margin-bottom: 50px;
+}
+
+#roadmap .container-p7 .relative {
+  position: relative;
+}
+
+#roadmap .container-p7 .icon-absolute {
+  position: absolute;
+  top: 50px;
+  left: 110px;
+}
+
+#roadmap .img-scroll {
+  width: 600px;
+  height: 550px;
+}
+
+#roadmap .img-icon {
+  width: 100px;
+  height: 400px;
+}
+
+#roadmap .img-witch {
+  width: 500px;
+  height: 400px;
+  margin-right: 50px;
+}
+
+#roadmap .content-absolute {
+  position: absolute;
+  top: 50px;
+  left: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+#roadmap .title-roadmap {
+  font-weight: 500;
+  color: black;
+  font-family: "Lilita One";
+  font-size: 16px;
+}
+
+#roadmap .text-roadmap {
+  color: #747688;
+  font-family: "Poppins";
+  font-weight: 500;
+  display: inline-block;
+  max-width: 250px;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  #portal {
+    background-image: url("../img/p5/background.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 1000px;
+  }
+
+  #portal .container-p5 {
+    margin-top: -100px;
+    width: 100%;
+  }
+
+  #portal .relative {
+    position: relative;
+  }
+
+  #portal .absolute {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    right: 0;
+    height: 275px;
+    width: 115%;
+    background-image: url("../img/p5/cloud.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+
+  .container-p5 .image-gate {
+    width: 100px;
+    height: 50px;
+  }
+
+  #portal .content-gate {
+    width: 100%;
+    margin-top: 12.75%;
+    gap: 10%;
+  }
+
+  #portal .image-relative {
+    position: relative;
+  }
+
+  #portal .image-absolute {
+    position: absolute;
+    left: 55px;
+    right: 55px;
+    bottom: 35px;
+  }
+
+  #portal .image-absolute-2 {
+    position: absolute;
+    left: 100px;
+    right: 100px;
+    bottom: 35px;
+  }
+
+  #portal .image-absolute > img {
+    width: 100%;
+    height: 300px;
+  }
+
+  #portal .image-absolute-2 > img {
+    width: 100%;
+    height: 50px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1199px) {
 }

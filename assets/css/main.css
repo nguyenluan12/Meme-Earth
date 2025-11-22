@@ -30,7 +30,6 @@
   /* 113.333% */
   text-transform: capitalize;
   text-align: center;
-  
 }
 
 #discovery p {
@@ -92,23 +91,22 @@
 
 #vitural-real {
   background-image: url("../img/p4/background.png");
-  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
+  background-repeat: no-repeat;
+  height: calc(100vw * 9 / 16);
+  width: 100%;
 }
+
 @media (min-width: 1220px) {
-  #vitural-real {
+  /* #vitural-real {
     background-image: url("../img/p4/background.png");
     background-repeat: no-repeat;
-    
-    background-position: top center; 
-    background-size: 1440px 100%; 
-
-    background-color: #243801; 
-    width: 100%; 
-    height: 810px;
-  }
+    background-position: center;
+    background-size: contain;
+    background-color: #243801;
+    width: 100%;
+  } */
 }
 .discovery.section {
   background-image: url("../img/bg-section-2.jpg");
@@ -165,11 +163,16 @@
   position: relative;
   margin-top: -100px;
 }
+
+#vitural-real .row {
+  margin-top: 150px;
+}
+
 .viewer-path {
-  position: absolute !important; 
-  margin: 0 !important; 
+  position: absolute !important;
+  margin: 0 !important;
   width: auto;
-  transform: translate(15%, 95%);
+  transform: translate(-10%, 60%);
 }
 
 #vitural-real-svg2 {
@@ -188,37 +191,37 @@
 }
 
 .land1 {
-  transform: translate(0, -10%);
+  transform: translate(-55%, -65%);
 }
 
 .land2 {
-  transform: translate(45%, 70%);
+  transform: translate(0%, 30%);
 }
 
 .land3 {
-  transform: translate(105%, -2%);
+  transform: translate(80%, -60%);
 }
 
 .land4 {
-  top: 40%;
+  top: -20%;
   left: 43%;
   transform: translate(0, 70%);
 }
 .land5 {
-  top: 50%;
-  left: 64.5%;
+  top: -90px;
+  right: 20px;
   transform: translate(0, 90%);
 }
 .land6 {
   top: 18%;
-  left: 76%;
+  right: -13%;
   transform: translate(0, 30%);
 }
 #viewer,
 #viewer2,
 #viewer3,
 #viewer4 {
-  width: 243px;
+  width: 300px;
   transform: translateY(80px);
 }
 .viewer-land {
@@ -226,7 +229,7 @@
   /* margin-top: -60px; */
 }
 #viewer-gate {
-  width: 165px;
+  width: 225px;
 }
 #viewer-memaland {
   width: 339px;
@@ -3642,10 +3645,10 @@ section.partner {
   .header .header-container {
     position: relative;
     justify-content: space-between !important;
-    padding: 10px 30px !important; 
+    padding: 10px 30px !important;
     margin: 0 !important;
     align-items: center;
-    height: 90px !important; 
+    height: 90px !important;
   }
   .header .logo {
     position: absolute;
@@ -3657,16 +3660,16 @@ section.partner {
   }
 
   .header .logo img {
-    width: 90px !important; 
+    width: 90px !important;
     padding: 0 !important;
     padding-right: 0px !important;
     margin-left: 100px;
   }
 
   .mobile-nav-toggle {
-    display: block !important; 
+    display: block !important;
     color: #000000 !important;
-    font-size: 42px !important; 
+    font-size: 42px !important;
     margin-right: 0 !important;
     cursor: pointer;
     z-index: 10001;
@@ -3677,7 +3680,7 @@ section.partner {
   }
 
   .header a > img[src*="buyland.png"] {
-    width: 150px !important; 
+    width: 150px !important;
     height: auto !important;
   }
 
@@ -3689,13 +3692,13 @@ section.partner {
     display: block !important;
     position: fixed !important;
 
-    top: 105px !important; 
-    left: 120px !important; 
+    top: 105px !important;
+    left: 120px !important;
     right: 120px !important;
 
     background: #f8f9fa !important;
     border-radius: 20px;
-    padding: 30px 0 !important; 
+    padding: 30px 0 !important;
     box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
     z-index: 9999;
     overflow-y: auto;
@@ -3705,10 +3708,10 @@ section.partner {
   .navmenu .nav-link {
     color: #333333 !important;
     font-family: "Lilita One", sans-serif;
-    font-size: 1.8rem !important; 
+    font-size: 1.8rem !important;
     text-align: center;
     justify-content: center !important;
-    padding: 15px 0 !important; 
+    padding: 15px 0 !important;
   }
 
   .navmenu .nav-link:hover {
@@ -3719,13 +3722,12 @@ section.partner {
     background: transparent !important;
   }
 
-
   .hero {
-    padding-top: 100px !important; 
+    padding-top: 100px !important;
     padding-bottom: 40px !important;
-    margin-top: -90px !important; 
+    margin-top: -90px !important;
     height: auto !important;
-    min-height: 700px !important; 
+    min-height: 700px !important;
     position: relative !important;
     overflow: hidden !important;
   }
@@ -3737,19 +3739,19 @@ section.partner {
   }
   .hero-elipse {
     position: absolute !important;
-    top: 0 !important; 
+    top: 0 !important;
     left: 0 !important;
     width: 100% !important;
-    height: 100% !important; 
-    transform: none !important; 
-    z-index: 0 !important; 
+    height: 100% !important;
+    transform: none !important;
+    z-index: 0 !important;
   }
 
   .hero-elipse img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: cover !important; 
-    object-position: center top !important; 
+    object-fit: cover !important;
+    object-position: center top !important;
   }
 
   .hero .content-col:first-child {
@@ -3777,16 +3779,16 @@ section.partner {
   .list-meme .row:first-child {
     display: flex !important;
     flex-direction: row !important;
-    justify-content: space-between !important; 
+    justify-content: space-between !important;
     flex-wrap: nowrap !important;
 
     width: 100% !important;
-    margin: 0 0 !important; 
+    margin: 0 0 !important;
     padding: 0 100px !important;
   }
 
   .list-meme .row:first-child img {
-    width: 120px !important; 
+    width: 120px !important;
   }
   #doge-p1 {
     transform: translate(40px, -50px);
@@ -3798,7 +3800,7 @@ section.partner {
     display: flex !important;
     justify-content: space-between !important;
     align-items: flex-end !important;
-    width: 80% !important; 
+    width: 80% !important;
     max-width: 600px !important;
     padding: 0 !important;
     margin: 0 auto !important;
@@ -3814,26 +3816,26 @@ section.partner {
 
   img.hero-mema {
     width: 140px !important;
-    transform: translate(25px, -120px) !important; 
+    transform: translate(25px, -120px) !important;
     z-index: 20;
     margin: 0 !important;
   }
 
   img.hero-penguin {
-    width: 110px !important; 
+    width: 110px !important;
     margin-bottom: 10px !important;
     transform: translate(40px, -100px) !important;
   }
 
   img.hero-squirrel {
-    width: 110px !important; 
+    width: 110px !important;
     margin-bottom: 10px !important;
     transform: translate(-40px, -100px) !important;
   }
 
   .title-banner {
     transform: none !important;
-    margin-top: -50px !important; 
+    margin-top: -50px !important;
     position: relative !important;
     display: flex;
     flex-direction: column;
@@ -4204,7 +4206,6 @@ section.partner {
   #vitural-real-svg1 {
     transform: scale(0.7) translate(-43%, 15%);
   }
-  
 
   .land1,
   .land2,
@@ -4356,13 +4357,7 @@ section.partner {
   .map-p3 {
     transform: scale(0.9) translateX(50px);
   }
-  #vitural-real{
-    height: 810px !important;
-  }
-  
-  #vitural-real-svg1 {
-    transform: translateX(-15%);
-  }
+
   .land1 {
     left: -5%;
   }
