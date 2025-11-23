@@ -378,3 +378,47 @@
     z-index: 1;
   }
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  #trump {
+  width: 300px;
+  transform: rotate(-3deg) translate(-10%, -45%); /* Nghiêng nhẹ sang trái */
+  margin-right: -40px; /* Chồng lấn lên Mema */
+  z-index: 1;
+}
+
+#mema {
+  width: 240px; /* Mema to nhất ở giữa */
+  z-index: 2; /* Nổi lên trên cùng */
+  margin-bottom: 10px;
+  transform: translateY(-74%);
+}
+
+#pepe {
+  width: 300px;
+  transform: rotate(5deg) translate(10%, -45%); /* Nghiêng nhẹ sang phải */
+  margin-left: -40px; /* Chồng lấn lên Mema */
+  z-index: 1;
+}
+}
+@media (min-width: 1024px) and (max-width: 1199px) {
+  #trump {
+  width: 300px;
+  transform: rotate(0deg) translate(-10%, -49%); /* Nghiêng nhẹ sang trái */
+  margin-right: -40px; /* Chồng lấn lên Mema */
+  z-index: 1;
+}
+
+#mema {
+  width: 240px; /* Mema to nhất ở giữa */
+  z-index: 2; /* Nổi lên trên cùng */
+  margin-bottom: 10px;
+  transform: translateY(-74%);
+}
+
+#pepe {
+  width: 300px;
+  transform: rotate(0deg) translate(10%, -49%); /* Nghiêng nhẹ sang phải */
+  margin-left: -40px; /* Chồng lấn lên Mema */
+  z-index: 1;
+}
+}

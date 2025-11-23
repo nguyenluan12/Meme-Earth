@@ -3612,9 +3612,9 @@ section.partner {
 }
 
 /* =========================================
-   TABLET / IPAD RESPONSIVE (768px - 1199px)
+   TABLET / IPAD Air
    ========================================= */
-@media (min-width: 767px) and (max-width: 1023px) {
+@media (min-width: 810px) and (max-width: 1023px) {
   html,
   body {
     overflow-x: hidden;
@@ -4169,14 +4169,14 @@ section.partner {
   }
 
   #vitural-real {
-    padding-top: 20px !important;
+   padding-top: 20px !important;
     padding-bottom: 60px !important;
     background-size: cover !important;
-    height: auto !important;
+    /* height: auto !important; */
     overflow: hidden;
   }
 
-  #vitural-real > h4 {
+   #vitural-real > h4 {
     font-size: 2.5rem !important;
     margin: 0px !important;
   }
@@ -4382,7 +4382,13 @@ section.partner {
   .mobile-nav-active .navmenu {
     background: transparent !important;
   }
-
+  .footer-culture h5{
+    padding: 0 !important;
+    white-space: nowrap;
+  }
+  .footer-culture p {
+    font-size: 1rem !important;
+  }
   .map-p3 {
     transform: scale(0.9) translateX(50px);
   }
@@ -4391,28 +4397,28 @@ section.partner {
   } */
 
   #vitural-real {
-    padding-top: 60px !important;
+   padding-top: 20px !important;
     padding-bottom: 60px !important;
     background-size: cover !important;
-    height: auto !important;
+    /* height: auto !important; */
     overflow: hidden;
   }
 
-  #vitural-real > h4 {
-    font-size: 5rem !important;
-    margin-bottom: 10px !important;
+   #vitural-real > h4 {
+    font-size: 2.5rem !important;
+    margin: 0px !important;
   }
   #vitural-real > h5 {
-    font-size: 1.5rem !important;
-    margin-bottom: 15px !important;
+    font-size: 1.2rem !important;
+    margin: 0px !important;
   }
   #vitural-real > p {
-    font-size: 1.1rem !important;
+    font-size: 0.9rem !important;
     padding: 0 60px;
     line-height: 1.5;
   }
   #vitural-real a img {
-    width: 160px !important;
+    width: 120px !important;
     margin-top: 20px !important;
     display: block;
     margin-left: auto;
@@ -4441,9 +4447,9 @@ section.partner {
   .viewer-path {
     display: block !important;
     position: absolute !important;
-    top: -100px !important;
-    left: 0% !important;
-    transform: translate(-12%, 12%) !important;
+    bottom: -105px !important;
+    left: -70px !important;
+    transform: scale(1) !important;
     width: 100% !important;
     height: 100% !important;
     pointer-events: none;
@@ -4470,33 +4476,33 @@ section.partner {
   }
 
   .land1 {
-    top: 0%;
-    left: -10% !important;
+    top: 60px;
+    left: -40px !important;
   }
 
   .land2 {
-    top: 18%;
-    left: 10% !important;
+    top: 250px;
+    left: 50px !important;
   }
 
   .land3 {
-    top: 1%;
-    left: 48% !important;
+    top: 65px;
+    left: 190px !important;
   }
 
   .land4 {
-    top: 17%;
-    left: 85% !important;
+    top: 240px;
+    left: 350px !important;
   }
 
   .land5 {
-    top: 13%;
-    left: 92% !important;
+    top: 217px;
+    left: 550px !important;
   }
 
   .land6 {
-    top: 4%;
-    left: 113% !important;
+    top: 105px;
+    left: 109% !important;
     width: 280px !important;
   }
 
@@ -4504,9 +4510,10 @@ section.partner {
   #viewer2,
   #viewer3,
   #viewer4 {
-    width: 120px !important;
+    width: 150px !important;
     display: block;
-    transform: translateX(30px) !important;
+    transform: translate(10px, 0px) !important;
+
   }
   #viewer-gate {
     width: 110px;
@@ -4515,7 +4522,8 @@ section.partner {
     width: 200px;
   }
   .viewer-land {
-    width: 100px !important;
+    width: 130px !important;
     margin-top: -30% !important;
   }
+
 }
